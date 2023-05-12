@@ -6,24 +6,26 @@
 # INSTALAR EN TERMUX
 `instalar de uno por uno`
 ```sh
-termux-setup-storage
+cd && termux-setup-storage
 
-apt update
+apt-get update -y && apt-get upgrade -y
 
-apt upgrade
+pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 
-pkg install -y git nodejs ffmpeg imagemagick yarn
-
-git clone https://github.com/AdolfoGriego/BakiBot-MD
-
-cd BakiBot-MD
-
-yarn install
-
-npm install
+git clone https://github.com/AdolfoGriego/Baki-termux.git && cd Baki-termux
 
 npm start
 ```
+
+
+
+
+
+
+
+
+
+
 # EN CASO QUE SE DETENGA
 ```sh
 cd BakiBot-MD
