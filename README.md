@@ -24,7 +24,7 @@ npm install
 
 npm start
 ```
-#EN CASO QUE SE DETENGA
+# EN CASO QUE SE DETENGA
 ```sh
 cd BakiBot-MD
 npm start
