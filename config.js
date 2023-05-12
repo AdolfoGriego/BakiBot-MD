@@ -11,6 +11,8 @@ global.owner = [
   ['5218451003894', 'AdolfoGriego', true],
   ['5217122941872', 'Cris Ofc', true],
   ['573135386192', 'Sandra', true],
+  ['573137112305'],
+  ['5217122133405']
 ] 
 
 global.suittag = ['5218451003894'] 
@@ -443,9 +445,9 @@ global.gt = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃'
 global.mysticbot = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃'
 global.md = 'https://github.com/AdolfoGriego/BakiBot-MD'
 global.mysticbot = 'https://github.com/AdolfoGriego/BakiBot-MD'
-global.waitt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
-global.waittt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
-global.waitttt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
+global.waitt = '*[ ⏳ ] Cargando espera un momento...*'
+global.waittt = '*[ ⏳ ] Cargando espera un momento...*'
+global.waitttt = '*[ ⏳ ] Cargando espera un momento...*'
 global.nomorown = '5218451003894'
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf']
 global.cmenut = '❖––––––『'
