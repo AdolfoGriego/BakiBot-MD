@@ -23,11 +23,12 @@ yarn install
 npm install
 
 npm start
-```sh
+```
 #EN CASO QUE SE DETENGA
+```sh
 cd BakiBot-MD
 npm start
-
+```
 
 # EDITOR Y PORPIETARIO DEL BOT
 
