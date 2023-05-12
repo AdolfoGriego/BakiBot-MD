@@ -4,6 +4,7 @@
 <a href="http://wa.me/528451003894" target="blank"><img src="https://img.shields.io/badge/Adolfo-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
 
 # INSTALAR EN TERMUX
+`instalar de uno por uno`
 ```sh
 termux-setup-storage
 
@@ -23,7 +24,9 @@ npm install
 
 npm start
 ```sh
-
+#EN CASO QUE SE DETENGA
+cd BakiBot-MD
+npm start
 
 
 # EDITOR Y PORPIETARIO DEL BOT
