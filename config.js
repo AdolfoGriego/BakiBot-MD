@@ -8,21 +8,29 @@ import axios from 'axios'
 import moment from 'moment-timezone' 
 
 global.owner = [
-  ['5218451003894', 'AdolfoGriego', true],
-  ['5217122941872', 'Cris Ofc', true],
-  ['573135386192', 'Sandra', true],
-  ['573137112305'],
-  ['5217122133405']
+  ['5219992095479', '👑 Mystic - Creador 👑', true],
+  ['50499698072', '💫 Mystic - Collaborator 1 💫', true],
+  ['51940617554', '💫 Mystic - Collaborator 2 💫', true],
+  ['51996089079', '💫 Mystic - Collaborator 3 💫', true],
+  ['593959425714', '💫 Mystic - Collaborator 4 💫', true],
+  ['50246028932', '💫 Mystic - Collaborator 5 💫', true],  
+  ['5212411719888', '💫 Mystic - Collaborator 6 💫', true],
+  ['5215533827255', '💫 Mystic - Collaborator 7 💫', false],
+  ['593968585283'],
+  ['5219993404349'],
+  ['584125778026'],
+  ['5219991402134'],	
+  ['5219996125657']
 ] 
 
-global.suittag = ['5218451003894'] 
-global.prems = ['5218451003894'] 
+global.suittag = ['5219993404349'] 
+global.prems = ['51995386439'] 
 
-global.packname = '(͡° ͜ʖ ͡°)'
-global.author = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃'
-global.wm = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃'
-global.igfg = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃'
-global.wait = '*[ ⏳ ] Cargando espera un momento...*'
+global.packname = '(☞ﾟ∀ﾟ)☞'
+global.author = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
+global.wm = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
+global.igfg = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
+global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
 
 
 global.openai_key = 'sk-0'
@@ -440,15 +448,15 @@ global.mes = d.toLocaleDateString('es', { month: 'long' })
 global.año = d.toLocaleDateString('es', { year: 'numeric' })
 global.tiempo = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
 //*****************************
-global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃`
-global.gt = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃'
-global.mysticbot = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃'
-global.md = 'https://github.com/AdolfoGriego/BakiBot-MD'
-global.mysticbot = 'https://github.com/AdolfoGriego/BakiBot-MD'
-global.waitt = '*[ ⏳ ] Cargando espera un momento...*'
-global.waittt = '*[ ⏳ ] Cargando espera un momento...*'
-global.waitttt = '*[ ⏳ ] Cargando espera un momento...*'
-global.nomorown = '5218451003894'
+global.wm2 = `▸ ${dia} ${fecha}\n▸ 𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝`
+global.gt = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
+global.mysticbot = '★𝚃𝚑𝚎 𝙼𝚢𝚜𝚝𝚒𝚌 - 𝙱𝚘𝚝★'
+global.md = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'
+global.mysticbot = 'https://github.com/BrunoSobrino/TheMystic-Bot-MD'
+global.waitt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
+global.waittt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
+global.waitttt = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
+global.nomorown = '5219993404349'
 global.pdoc = ['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.ms-excel', 'application/msword', 'application/pdf', 'text/rtf']
 global.cmenut = '❖––––––『'
 global.cmenub = '┊✦ '
