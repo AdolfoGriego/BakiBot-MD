@@ -5,17 +5,67 @@
 
 # INSTALAR EN TERMUX
 `instalar de uno por uno`
-```sh
-cd && termux-setup-storage
+`''sh
+ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
+> termux-setup-storage
 
-apt-get update -y && apt-get upgrade -y
+(Dan permiso a su almacenamiento)
 
-pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
+> termux-change-repo
 
-git clone https://github.com/AdolfoGriego/Baki-termux.git && cd Baki-termux
 
-npm start
+> apt update -y && apt upgrade -y
+
+> pkg install git
+
+> pkg install nodejs
+
+> pkg install libwebp -y
+
+> pkg install ffmpeg -y
+
+> pkg install imagemagick -y
+
+> pkg install yarn
+
+> yarn
+
+> npm start
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
