@@ -1,4 +1,9 @@
-# BakiBot-MD
+<h1 align="center">BakiBot-MD</h1>
+
+<br>
+
+<div align="center">
+  
 # CONTACTAME
 
 <a href="http://wa.me/528451003894" target="blank"><img src="https://img.shields.io/badge/Adolfo-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" /></a>
@@ -27,6 +32,10 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > pkg install imagemagick -y
 
 > pkg install yarn
+
+> git clone https://github.com/AdolfoGriego/BakiBot-MD
+
+> cd BakiBot-MD
 
 > yarn
 
