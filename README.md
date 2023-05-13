@@ -5,7 +5,7 @@
 
 # INSTALAR EN TERMUX
 `instalar de uno por uno`
-`''sh
+```sh
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > termux-setup-storage
 
