@@ -1,4 +1,4 @@
-console.log('Iniciando BakiBot');
+console.log('Ejecuntando al bot mas shidori');
 
 import { join, dirname } from 'path'
 import { createRequire } from 'module'
