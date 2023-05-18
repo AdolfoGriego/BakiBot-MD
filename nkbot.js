@@ -1,4 +1,4 @@
-console.log('Ejecuntando al bot mas shidori');
+console.log('Iniciando BakiBot');
 
 import { join, dirname } from 'path'
 import { createRequire } from 'module'
@@ -24,7 +24,7 @@ say(`BakiBot-MD`, {
     gradient: ["red","blue"]
 })
 
-say((`BOT 2023`), {
+say((`BakiBot`), {
     font: 'simple3d',
     color: 'candy',
     align: 'center',

@@ -1,7 +1,7 @@
 {
     "name": "BakiBot-MD",
     "version": "1.0.5",
-    "description": "Mejor Bot De WhatsApp Espero Te Guste",
+    "description": "WhatsApp Bot Multi Device",
     "main": "nkbot.js",
     "type": "module",
     "directories": {
@@ -22,7 +22,7 @@
     ],
     "homepage": "",
     "author": {
-        "name": "BakiBot-MD"
+        "name": "?? ?? ??????? ??"
     },
     "repository": {
         "type": "git",
