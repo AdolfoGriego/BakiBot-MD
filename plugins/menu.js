@@ -123,7 +123,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, command, isPrems }) =
 image: fs.readFileSync('./multimedia/imagenes/menu.jpg'),
 caption: text.trim(),
 footer: `*PUEDES INSTALAR ESTE BOT POR TERMUX*\n\n📌 wa.me/5218451003894\n🤓 Solo escribeme si quieres instalar el bot.\nescribeme diciendo:\nAyuda para instalar tu bot`,
-buttons: [{buttonId: Prefijo+`apoyo`, buttonText: {displayText: "[ 🤗 APOYO ]"}, type: 1}, {buttonId: Prefijo+`creador`, buttonText: {displayText: "[ 👨‍💻CREADOR ]",}, type: 1}, {buttonId: Prefijo+`informacion`, buttonText: {displayText: "[ 🧻 INFORMACION ]"}, type: 1}],
+buttons: [{buttonId: Prefijo+`apoyo`, buttonText: {displayText: "[ 🤗 APOYO ]"}, type: 1}, {buttonId: Prefijo+`creador`, buttonText: {displayText: "[ 🗿CREADOR ]",}, type: 1}, {buttonId: Prefijo+`informacion`, buttonText: {displayText: "[ 👨‍💻 INFORMACION ]"}, type: 1}],
 headerType: 4,
 ...{ contextInfo: { mentionedJid: [m.sender], externalAdReply: { thumbnail: fs.readFileSync('./multimedia/imagenes/logo.jpg'), sourceUrl: 'https://github.com/AdolfoGriego/BakiBot-MD' }}}
 }, { quoted: m }) 
@@ -136,16 +136,16 @@ reacMoji(m.chat, conn, '🤖', m)
 const defaultMenu = {
   before: `\n
 ╭───❮ \`\`\`𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃\`\`\` ❯───
-├➣ *⏲️ Tiempo activo:* %uptime
-├➣ *🃏 Version del bot:* %version
+├➣ *⏳ Tiempo activo:* %uptime
+├➣ *🤖 Version del bot:* %version
 ├➣ *👨‍💻 Dueño del bot:* 𝐀𝐝𝐨𝐥𝐟𝐨𝐆𝐫𝐢𝐞𝐠𝐨
-├➣ *🗿 Prefijo único:* 「 %pref 」
+├➣ *✴ Prefijo único:* 「 %pref 」
 ├➣ *👤 Cliente:* %name
-├➣ *🔰 Premium:* %prem
-├➣ *👁️‍🗨️ Limite restante:* %limit
-├➣ *✴️ Nivel:* %level (%exp / %maxexp)
-├➣ *🎐 Rol:* %role
-├➣ *✨ XP:* %totalexp
+├➣ *👑 Premium:* %prem
+├➣ *️‍🛡️ Limite restante:* %limit
+├➣ *⚖ Nivel:* %level (%exp / %maxexp)
+├➣ *🤓 Rol:* %role
+├➣ *💎 XP:* %totalexp
 ╰───────────────────────
 %readmore
 ☳ 𝗖𝗼𝗺𝗮𝗻𝗱𝗼𝘀 𝗮𝗰𝘁𝘂𝗮𝗹𝗲𝘀\n`.trimStart(),

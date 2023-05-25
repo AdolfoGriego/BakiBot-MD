@@ -3,22 +3,22 @@ Quieres volver a registrarte nuevamente?
 Use el comando:  
 
 ${Prefijo}unreg <C\xf3digo de registro>
-`);if(!d)return i.reply("Hola porfavor registrate bien\n*[ EJEMPLO ]*\n📌.reg Universe|17");if(!d.includes("|"))return i.reply(`*[ ! ] Por favor agregue una barra en medio de nombre y edad*
+`);if(!d)return i.reply("Hola porfavor registrate bien\n*[ EJEMPLO ]*\n📌.reg Baki|20");if(!d.includes("|"))return i.reply(`*[ ⚠ ] Por favor agregue una barra en medio de nombre y edad*
 
 " | "
-`);let l=d.substring(0,d.indexOf("|")-0),g=d.substring(d.lastIndexOf("|")+1)||"-",u=n("md5").update(i.sender).digest("hex");if(isNaN(g))return await i.reply(`*[ ! ] En edad solo se aceptan n\xfameros -.-*`);if(l.length>=20)return i.reply("*[ ! ] Bruh el nombre es muy largo ._.*");if(g>31)return i.reply(`*[ ! ] Maximo de edad 30 a\xf1os*`);if(g<12)return i.reply(`*[ ! ] Minimo de edad 13 a\xf1os*`);let p=l,c=Math.round(g),f=c<"15"?"Puberto(a)":c<"18"?"Adolecente":c<"25"?"Joven":c<"30"?"Adulto(a)":"";try{var h=(await o.fetchStatus(i.sender)).status}catch{var h="-"}let y=h.length<5?a.fechaCompleta:"Info: "+h,$=await o.getName(i.sender),b=await o.profilePictureUrl(i.sender,"image").catch(e=>"./multimedia/imagenes/avatar_contact.png");await i.reply(MultiNK.Proces($));let v=`           「  *REGISTRO* 」
+`);let l=d.substring(0,d.indexOf("|")-0),g=d.substring(d.lastIndexOf("|")+1)||"-",u=n("md5").update(i.sender).digest("hex");if(isNaN(g))return await i.reply(`*[ ⚠ ] En edad solo se aceptan n\xfameros -.-*`);if(l.length>=20)return i.reply("*[ ⚠ ] crack el nombre es muy largo ._.*");if(g>31)return i.reply(`*[ ⚠ ] Maximo de edad 30 a\xf1os*`);if(g<12)return i.reply(`*[ ⚠ ] Minimo de edad 13 a\xf1os*`);let p=l,c=Math.round(g),f=c<"15"?"Puberto(a)":c<"18"?"Adolecente":c<"25"?"Joven":c<"30"?"Adulto(a)":"";try{var h=(await o.fetchStatus(i.sender)).status}catch{var h="-"}let y=h.length<5?a.fechaCompleta:"Info: "+h,$=await o.getName(i.sender),b=await o.profilePictureUrl(i.sender,"image").catch(e=>"./multimedia/imagenes/avatar_contact.png");await i.reply(MultiNK.Proces($));let v=`           「  *REGISTRO* 」
 
 *📅 Fecha de registro:*
 ${a.fechaCompleta}.
 
-╭─────────────────────ঐ
-*❐👤Nombre Registrado* : ${p}
-*❐🔰️Nombre usado en whatsapp* : ${$}
-*❐🔢Edad* : ${c}
-*❐👨‍👩‍👧‍👦De acuerdo a tu edad eres un(a)* : ${f}
-*❐💻Informaci\xf3n* : ${h}
-*❐💡N\xba* : wa.me/${i.sender.split("@")[0]}
-╰─────────────────────ঐ
+╭─────────────────────╮
+*├➣👤Nombre Registrado* : ${p}
+*├➣🔰️Nombre usado en whatsapp* : ${$}
+*├➣🔢Edad* : ${c}
+*├➣👨‍👩‍👧‍👦De acuerdo a tu edad eres un(a)* : ${f}
+*├➣💻Informaci\xf3n* : ${h}
+*├➣💡N\xba* : wa.me/${i.sender.split("@")[0]}
+╰─────────────────────╯
 
 \`\`\`Codigo de registro:\`\`\` ${u}.py 
 

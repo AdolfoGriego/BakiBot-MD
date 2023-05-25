@@ -1,4 +1,4 @@
-import*as e from"fs";let handler=async(a,{conn:t,args:r})=>{await t.profilePictureUrl(a.chat,"image").catch(e=>null);let n=await t.getName(a.sender);try{var l=await t.profilePictureUrl(a.sender,"image")}catch{var l="https://i.ibb.co/jhQ7gL0/Sin-Perfil-F.jpg"}try{var i=await global.getBuffer(l)}catch{var i=e.readFileSync("./multimedia/imagenes/avatar_contact.png")}t.relayMessage(a.chat,{extendedTextMessage:{text:`*❐═════❮ 𝗡𝗨𝗠𝗘𝗥𝗢 - 𝗟𝗜𝗠𝗞 ❯═════❐
+import*as e from"fs";let handler=async(a,{conn:t,args:r})=>{await t.profilePictureUrl(a.chat,"image").catch(e=>null);let n=await t.getName(a.sender);try{var l=await t.profilePictureUrl(a.sender,"image")}catch{var l="https://i.ibb.co/jhQ7gL0/Sin-Perfil-F.jpg"}try{var i=await global.getBuffer(l)}catch{var i=e.readFileSync("./multimedia/imagenes/avatar_contact.png")}t.relayMessage(a.chat,{extendedTextMessage:{text:`*╭─────❮ 𝗡𝗨𝗠𝗘𝗥𝗢 - 𝗟𝗜𝗠𝗞 ❯─────╮
 
 *👤Solicitado por:* ${n} 
 

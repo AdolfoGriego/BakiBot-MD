@@ -12,13 +12,13 @@ export function before(m) {
     if (before !== user.level) {
         user.role = global.rpg.role(user.level).name
         m.reply(`
-❐─────❮ 𝗟𝗘𝗩𝗘𝗟 - 𝗨𝗣 ❯─────❐
+✯─────❮ 𝗟𝗘𝗩𝗘𝗟 - 𝗨𝗣 ❯─────✯
 *👤 Usuario:* ${this.getName(m.sender)} 
 *_🎊 Felicidades subiste a un nuevo nivel_*
 ╭─────────────────────
-*➣🗿Tu nivel antiguo:* ${before}
-*➣🤓Tu nivel actual:* ${user.level}
-*➣🛡️Tu rol:* ${user.role}
+*├➣🗿Tu nivel antiguo:* ${before}
+*├➣🤓Tu nivel actual:* ${user.level}
+*├➣🛡️Tu rol:* ${user.role}
 ╰─────────────────────
 	`.trim())
     }

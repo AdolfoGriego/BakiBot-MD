@@ -3,7 +3,7 @@ let handler = async (m, { conn, text, command }) => {
 	if(!text.match(/@/g)) return m.reply(`Ejemplo de uso:\n\n${Prefijo + command} @+52xxxx\n`)
 	let user = text.replace(/[^0-9]/g, '')+'@s.whatsapp.net' 
 	await conn.groupParticipantsUpdate(m.chat, [user], 'demote').catch(e => {console.log(e)})
-	reacMoji(m.chat, conn, '⚔️', m)
+	reacMoji(m.chat, conn, '⚡', m)
 }
 
 handler.help = ['quitarpoder @usuario']
