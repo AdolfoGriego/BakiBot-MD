@@ -16,4 +16,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "nkbot.js"]
+CMD ["node", "bakibot.js"]
