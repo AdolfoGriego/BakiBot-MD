@@ -5,7 +5,7 @@ import { addExif } from '../lib/sticker.js'
 let handler = async (m, { conn, text, command }) => {
 	if (!text) return m.reply(`Modo de uso:\n\n${Prefijo + command} The life is a party\n`)
     let attexto = encodeURIComponent(text)
-    let attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${attexto}`) 
+    let attp2 = await getBuffer(`https://api.erdwpe.com/api/maker/attp?text=${attexto}`) 
     let stiker = await addExif(attp2, '', `[_>] ${NombreDelBot}\n`) 
     conn.sendMessage(m.chat, {sticker: stiker}, {quoted: m})
 }
