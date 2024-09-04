@@ -4,18 +4,18 @@ const chalk = require('chalk')
 const { en, es, ar, id, pt, rs} = require('./libs/idiomas/total-idiomas.js') 
 
 //---------[ PROPIETARIO/OWNER ]---------
-global.owner = [["528451003894", "AdolfoGriego", true], ["528451022548"],  [""]]
+global.owner = [["50582340051", "Eliasar YT", true], ["593968585383"], ["5492266466080"], ["595986172767"], ["5492266613038"], ["5217294888993"], ["5214434703586"], ["5214437863111"], ["51906662557"], ["595992302861"], ["5217441298510"], ["5491155983299"], ["5493795319022"], ["5217821153974"], ["573012482597"]]
 global.mods = []
 global.premium = []  
 global.blockList = []  
 
 //---------[ NOMBRE/INFO ]---------
-global.botname = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃"
-global.wm = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃'
-global.vs = '2.0 (beta)'
+global.botname = "𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 🏵️"
+global.wm = '𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 🏵️'
+global.vs = '1.0 (beta)'
 
 //Función beta : escribe el número que quiere que sea bot para que mande el Código de 8 digitos
-global.botNumberCode = "" //Ejemplo: +528451003894
+global.botNumberCode = "" //Ejemplo: +50231458537
 global.phoneNumber = ""
 
 //---------[ FECHA/IDIOMAS ]---------
@@ -71,7 +71,7 @@ global.APIKeys = {
 };
  
 //---------[ STICKERS ]---------
-global.packname = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️"
+global.packname = "𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 🏵️"
 global.author = `${vs}`
 
  global.catalogo = "https://qu.ax/WlyB.jpg"
@@ -91,9 +91,12 @@ global.imagen3 = "https://telegra.ph/file/5a3718c100e3dd9d57f3e.jpg"
 global.noperfil = "https://telegra.ph/file/674ee87b21c831fd5fc6e.jpg"
 
 //---------[ ENLACES ]---------
-global.md = 'https://github.com/AdolfoGriego/BakiBot-MD'
-global.yt = 'https://www.youtube.com/@AdolfoGriego'
-global.pagina = 'https://tinyurl.com/25msz48r' 
+global.md = 'https://github.com/Eliasar54/SAMURAI-BOT'
+global.yt = 'https://www.youtube.com/@Eliasar_yt'
+global.tiktok = 'https://www.tiktok.com/@eliasar_yt?_t=8mjJpoJfOBK&_r=1'
+global.fb = 'https://www.facebook.com/profile.php?id=100087710532984&mibextid=kFxxJD'
+global.faceb = 'https://www.facebook.com/profile.php?id=100087710532984&mibextid=kFxxJD'
+global.paypal = 'https://www.paypal.me/EliasarMoncada72' 
 
 global.host = 'https://chat.whatsapp.com/GQ82mPnSYnm0XL2hLPk7FV' //Infinity-host
 global.nna = 'https://whatsapp.com/channel/0029VadxAUkKLaHjPfS1vP36' //Update 
@@ -128,10 +131,10 @@ registra: `${lenguaje['registra']()}`,
 limit: `${lenguaje['limit']()}`, 
 AntiNsfw: `${lenguaje['AntiNsfw']()}`,
 endLimit: `${lenguaje['endLimit']()}`, }
-global.rwait = '⏳'
+global.rwait = '🕛'
 global.dmoji = '🧐'
-global.done = '🤓'
-global.error = '❎' 
+global.done = '⚔️'
+global.error = '😖' 
 global.xmoji = '🥵' 
 
 //---------------[ NIVELES, ADVERTENCIA ]----------------
