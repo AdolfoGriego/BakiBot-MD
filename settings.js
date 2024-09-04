@@ -4,14 +4,14 @@ const chalk = require('chalk')
 const { en, es, ar, id, pt, rs} = require('./libs/idiomas/total-idiomas.js') 
 
 //---------[ PROPIETARIO/OWNER ]---------
-global.owner = [["50582340051", "Eliasar YT", true], ["593968585383"], ["5492266466080"], ["595986172767"], ["5492266613038"], ["5217294888993"], ["5214434703586"], ["5214437863111"], ["51906662557"], ["595992302861"], ["5217441298510"], ["5491155983299"], ["5493795319022"], ["5217821153974"], ["573012482597"]]
+global.owner = [["528451003894", "î.am/★𝐀𝐝𝐨𝐥𝐟𝐨𝐆𝐫𝐢𝐞𝐠𝐨★.exe", true], ["593968585383"], ["5492266466080"], ["595986172767"], ["5492266613038"], ["5217294888993"], ["5214434703586"], ["5214437863111"], ["51906662557"], ["595992302861"], ["5217441298510"], ["5491155983299"], ["5493795319022"], ["5217821153974"], ["573012482597"]]
 global.mods = []
 global.premium = []  
 global.blockList = []  
 
 //---------[ NOMBRE/INFO ]---------
-global.botname = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃"
-global.wm = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃'
+global.botname = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️"
+global.wm = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️'
 global.vs = '1.0 (beta)'
 
 //Función beta : escribe el número que quiere que sea bot para que mande el Código de 8 digitos
@@ -71,7 +71,7 @@ global.APIKeys = {
 };
  
 //---------[ STICKERS ]---------
-global.packname = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃"
+global.packname = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️"
 global.author = `${vs}`
 
  global.catalogo = "https://qu.ax/WlyB.jpg"
@@ -85,13 +85,13 @@ global.img1 = 'https://qu.ax/WlyB.jpg'
 global.img2 = 'https://qu.ax/WlyB.jpg'
 global.vid1 = "https://telegra.ph/file/4e1a3ae13b9bf62466560.jpg"
 
-global.imagen1 = "https://telegra.ph/file/18ef6770458bb6e8f34e2.jpg"
+global.imagen1 = "https://telegra.ph/file/4f6c25b2a8bdf655aa1e1.jpg"
 global.imagen2 = "https://telegra.ph/file/c8167988aba0d9a51db70.jpg"
 global.imagen3 = "https://telegra.ph/file/5a3718c100e3dd9d57f3e.jpg"
-global.noperfil = "https://telegra.ph/file/674ee87b21c831fd5fc6e.jpg"
+global.noperfil = "https://telegra.ph/file/4f6c25b2a8bdf655aa1e1.jpg"
 
 //---------[ ENLACES ]---------
-global.md = 'https://github.com/Eliasar54/SAMURAI-BOT'
+global.md = 'https://github.com/AdolfoGriego/BakiBot-MD'
 global.yt = 'https://www.youtube.com/@Eliasar_yt'
 global.tiktok = 'https://www.tiktok.com/@eliasar_yt?_t=8mjJpoJfOBK&_r=1'
 global.fb = 'https://www.facebook.com/profile.php?id=100087710532984&mibextid=kFxxJD'
@@ -131,11 +131,11 @@ registra: `${lenguaje['registra']()}`,
 limit: `${lenguaje['limit']()}`, 
 AntiNsfw: `${lenguaje['AntiNsfw']()}`,
 endLimit: `${lenguaje['endLimit']()}`, }
-global.rwait = '⏳'
+global.rwait = '🕛'
 global.dmoji = '🧐'
-global.done = '👨🏻‍💻️'
-global.error = '❎' 
-global.xmoji = '🔞' 
+global.done = '⚔️'
+global.error = '😖' 
+global.xmoji = '🥵' 
 
 //---------------[ NIVELES, ADVERTENCIA ]----------------
 global.multiplier = 180 // Cuanto más alto, más difícil subir de nivel 
