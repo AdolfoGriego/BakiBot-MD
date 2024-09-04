@@ -121,7 +121,7 @@ return fileInDir.startsWith('pre-key-') /*|| fileInDir.startsWith('app-') || fil
 })
 SBprekey = [...SBprekey, ...DSBPreKeys]
 DSBPreKeys.forEach(fileInDir => {
-unlinkSync(`./jadibots/${directorio}/${fileInDir}`)
+unlinkSync(`./jadibts/${directorio}/${fileInDir}`)
 })}})
 if (SBprekey.length === 0) return; 
 console.log(chalk.cyanBright(lenguaje['session']()))
@@ -130,7 +130,7 @@ console.log(chalk.bold.red(lenguaje['errorsession']()))
 }}
 
 function purgeOldFiles() {
-const directories = ['./sessions/', './jadibots/']
+const directories = ['./sessions/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -656,7 +656,7 @@ if (connection == 'connecting') {
 console.log(chalk.red('iniciando✨...'));
 console.log(chalk.green('ya casi...'));
 console.log(chalk.blue('listo✨...')); // Cambiado a azul
-say('samurai\nbot', {
+say('baki\nbot', {
     font: '3d',
     align: 'center',
     colors: ['blue', 'red']
@@ -664,7 +664,7 @@ say('samurai\nbot', {
 
 say(`By: AdolfoGriego`, {
     font: 'console',
-    gradient: ['blue', 'blue']
+    gradient: ['red', 'red']
 });
 
 
