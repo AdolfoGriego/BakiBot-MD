@@ -184,10 +184,10 @@ chalk.bold.cyanBright(`▣───────────────╯`)
 if (global.db.data.settings[numBot].autobio) {
 let setting = global.db.data.settings[numBot]
 if (!setting.bioUpdated) {
-let text = "🏵️ 𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 𝐎𝐅𝐂 🏵️"
+let text = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃"
 try {
 await conn.updateProfileStatus(text)
-await conn.updateProfilePicture(numBot, { url: "https://telegra.ph/file/17f94deeba870f4cb56b9.jpg" })
+await conn.updateProfilePicture(numBot, { url: "https://telegra.ph/file/4f6c25b2a8bdf655aa1e1.jpg" })
 setting.status = new Date() * 1
 setting.bioUpdated = true
 } catch {
