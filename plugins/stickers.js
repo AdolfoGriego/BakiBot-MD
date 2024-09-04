@@ -18,7 +18,7 @@ media = await quoted.download()
 let encmedia = await conn.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author, contextInfo: {forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363297379773397@newsletter', 
 serverMessageId: '', 
-newsletterName: '🏵️ 𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 𝐎𝐅𝐂 🏵️' }, 
+newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
 forwardingScore: 9999999,  
 isForwarded: true, externalAdReply:{ showAdAttribution: false, title: botname, mediaType: 2, sourceUrl: nn6, thumbnail: imagen1}}})
 await fs.unlinkSync(encmedia)  
@@ -28,7 +28,7 @@ media = await quoted.download()
 let encmedia = await conn.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author, contextInfo: { forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363297379773397@newsletter', 
 serverMessageId: '', 
-newsletterName: '🏵️ 𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 𝐎𝐅𝐂 🏵️' }, 
+newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
 forwardingScore: 9999999,  
 isForwarded: true, externalAdReply:{ showAdAttribution: false, title: botname, mediaType: 2, sourceUrl: nn6, thumbnail: imagen1}}})
 await new Promise((resolve) => setTimeout(resolve, 2000));
