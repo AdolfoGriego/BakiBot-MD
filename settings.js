@@ -10,12 +10,12 @@ global.premium = []
 global.blockList = []  
 
 //---------[ NOMBRE/INFO ]---------
-global.botname = "𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 🏵️"
-global.wm = '𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 🏵️'
+global.botname = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃"
+global.wm = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃'
 global.vs = '1.0 (beta)'
 
 //Función beta : escribe el número que quiere que sea bot para que mande el Código de 8 digitos
-global.botNumberCode = "" //Ejemplo: +50231458537
+global.botNumberCode = "" //Ejemplo: +528451003894
 global.phoneNumber = ""
 
 //---------[ FECHA/IDIOMAS ]---------
@@ -71,7 +71,7 @@ global.APIKeys = {
 };
  
 //---------[ STICKERS ]---------
-global.packname = "𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 🏵️"
+global.packname = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃"
 global.author = `${vs}`
 
  global.catalogo = "https://qu.ax/WlyB.jpg"
@@ -131,11 +131,11 @@ registra: `${lenguaje['registra']()}`,
 limit: `${lenguaje['limit']()}`, 
 AntiNsfw: `${lenguaje['AntiNsfw']()}`,
 endLimit: `${lenguaje['endLimit']()}`, }
-global.rwait = '🕛'
+global.rwait = '⏳'
 global.dmoji = '🧐'
-global.done = '⚔️'
-global.error = '😖' 
-global.xmoji = '🥵' 
+global.done = '👨🏻‍💻️'
+global.error = '❎' 
+global.xmoji = '🔞' 
 
 //---------------[ NIVELES, ADVERTENCIA ]----------------
 global.multiplier = 180 // Cuanto más alto, más difícil subir de nivel 
