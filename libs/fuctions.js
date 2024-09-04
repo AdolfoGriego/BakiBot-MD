@@ -1144,7 +1144,7 @@ conn.sendList = async(jid, title, text, buttonText, listSections, quoted, option
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
             newsletterJid: '120363297379773397@newsletter',
-            newsletterName: '🏵️ 𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 𝐎𝐅𝐂 🏵️', 
+            newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️', 
             serverMessageId: ''
           }
         }
