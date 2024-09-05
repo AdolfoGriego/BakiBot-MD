@@ -8,7 +8,10 @@ const baileys = require('@whiskeysockets/baileys'); // trabajar a través de des
 const { WaMessageStubType, WA_DEFAULT_EPHEMERAL, BufferJSON, areJidsSameUser, downloadContentFromMessage, generateWAMessageContent, generateWAMessageFromContent, generateWAMessage, prepareWAMessageMedia, getContentType,  relayMessage} = require('@whiskeysockets/baileys'); // Importa los objetos 'makeWASocket' y 'proto' desde el módulo '@whiskeysockets/baileys'       
 const { default: makeWASocket, proto } = require("@whiskeysockets/baileys")  
 const moment = require('moment-timezone') // Trabajar con fechas y horas en diferentes zonas horarias
-const gradient = require('gradient-string') // Aplicar gradientes de color al texto      
+const gradient = require('gradient-string') // Aplicar gradientes de color al texto    
+ const enviar = (texto) => {
+ sock.sendMessage(from,{ text : texto }, {quoted : info})
+ }  
 const { exec, spawn, execSync } =  require("child_process")// Función 'execSync' del módulo 'child_process' para ejecutar comandos en el sistema operativo 
 const chalk = require('chalk') // Estilizar el texto en la consola  
 const os = require('os') // Proporciona información del sistema operativo 
@@ -127,7 +130,7 @@ const time = moment(Number(msg.messageTimestamp + "000")).locale("es-mx").tz("Am
   
 /*const reply = (text) => {  
 m.reply(text)}*/
-function sendMessage(conn, chat, text, m) {conn.sendMessage(chat, { text: text, contextInfo: { forwardedNewsletterMessageInfo: {newsletterJid: '120363297379773397@newsletter', serverMessageId: '', newsletterName: '🏵️ 𝐒𝐀𝐌𝐔𝐑𝐀𝐈-𝐁𝐎𝐓 𝐎𝐅𝐂 🏵️' }, forwardingScore: 9999999, isForwarded: true }}, {quoted: m, ephemeralExpiration: 24*60*60*1000, disappearingMessagesInChat: 24*60*60*1000 // Ajustado a milisegundos
+function sendMessage(conn, chat, text, m) {conn.sendMessage(chat, { text: text, contextInfo: { forwardedNewsletterMessageInfo: {newsletterJid: '120363296103096943@newsletter', serverMessageId: '', newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, forwardingScore: 9999999, isForwarded: true }}, {quoted: m, ephemeralExpiration: 24*60*60*1000, disappearingMessagesInChat: 24*60*60*1000 // Ajustado a milisegundos
 })} 
 m.reply = (text) => {  
 sendMessage(conn, m.chat, text, m)}
@@ -163,36 +166,25 @@ let msg = {...chatUpdate, messages: [proto.WebMessageInfo.fromObject(messages)],
 conn.ev.emit('messages.upsert', msg)}
    
 //--------------------[ INFO CONSOLE ]-----------------------
-if (m.message) {
-console.log(
-chalk.bold.cyanBright(`▣───────────────╮`), 
-chalk.bold.cyanBright(`🥷 ${conn.user.jid.split`@`[0]} ➢ ${botname} ${conn.user.id == global.numBot2 ? '' : '(SubBot)'} ${vs}`), 
-chalk.bold.cyanBright(`╰───────────────▣`), 
-chalk.cyan(`⏰ Hora: `) + chalk.white(`⏲️ ` + new Date().toLocaleString('es-ES', { timeZone: 'America/Argentina/Buenos_Aires' })),
-chalk.red(`🈶 Estado: `) + chalk.white(`[${conn.public ? 'Público' : 'Privado'}]`), 
-chalk.yellow(`📜 Tipo: `) + chalk.white(`${type}`), 
-m.isGroup 
-? chalk.green(`🏯 Grupo: `) + chalk.white(groupName) + ` ➜ ` + chalk.white(from) 
-: chalk.green(`👤 Usuario: `) + chalk.white(userSender), 
-chalk.cyan(`📛 Nombre: `) + chalk.white(pushname) + ` ➜ ` + chalk.white(userSender), 
-chalk.white(`💬 Mensaje: `) + chalk.white(`\n${msgs(m.text)}`),
-chalk.bold.cyanBright(`▣───────────────╯`)
-    );
-}
+if (m.message) { console.log(chalk.bold.hex('#FFB6C1')(`━━━━━━━━━━ ❀~❀ ━━━━━━━━━━\n│❁ ${conn.user.jid.split`@`[0]} ➥ ${botname} ${conn.user.id == global.numBot2 ? '' : '(sub-bot)'} ${vs}`) + chalk.bold.hex('#DA70D6')(`\n│──────────────\n│⏰ ${lenguaje.consola.text} `) + chalk.hex('#FF69B4')(new Date().toLocaleString('es-ES', { timeZone: 'America/Argentina/Buenos_Aires' })) + chalk.bold.hex('#FF1493')(`\n️│🏷️ ${lenguaje.consola.text1} `) + chalk.bold.hex('#FFFAFA')(`[${conn.public ? 'Público' : 'Privado'}]`) + chalk.bold.hex('#FFD700')(`\n│📑 ${lenguaje.consola.text2} `) + chalk.hex('#FFDAB9')(`${type}`) + (m.isGroup ? chalk.bold.hex('#98FB98')(`\n│🌸 ${lenguaje.consola.text4} `) + chalk.hex('#ADFF2F')(groupName) + ' ➜ ' + gradient.pastel(from) : chalk.bold.hex('#98FB98')(`\n│💌 ${lenguaje.consola.text5} `) + chalk.hex('#ADFF2F')(userSender)) + chalk.bold.hex('#BA55D3')(`\n│✨ ${lenguaje.consola.text3} `) + chalk.hex('#9370DB')(pushname) + ' ➜ ' + gradient.pastel(userSender) + chalk.bold.hex('#FFF5EE')(`\n│💬 ${lenguaje.consola.text6}`) + chalk.hex('#FFFAFA')(`\n━━━━━━━━━━❦✿❦━━━━━━━━━━━\n${msgs(m.text)}\n`)); }
 
 //--------------------[ AUTOBIO ]----------------------- 
-if (global.db.data.settings[numBot].autobio) {
+/*if (global.db.data.settings[numBot].autobio) { 
 let setting = global.db.data.settings[numBot]
-if (!setting.bioUpdated) {
-let text = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃"
+if (new Date() * 1 - setting.status > 1000) {
+let uptime = await runtime(process.uptime())
+var timestamp = speed();   
+var latensi = speed() - timestamp 
+let text = [`${lenguaje.Bio.text} ${Object.keys(global.db.data.users).length} ${lenguaje.Bio.text2} ${latensi.toFixed(4)} 🚀`, `${lenguaje.Bio.text3} ${runtime(process.uptime())}\n\n${lenguaje.Bio.text4}`, `${lenguaje.Bio.text5}`, `✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨ uso: ${conn.public ? 'Publico' : 'Privado'} | ${lenguaje.Bio.text6} ${runtime(process.uptime())} | ${lenguaje.Bio.text7} ${Object.keys(global.db.data.users).length} crador Eliasar YT`]
+let bio = text[Math.floor(Math.random() * text.length)]
 try {
-await conn.updateProfileStatus(text)
-await conn.updateProfilePicture(numBot, { url: "https://telegra.ph/file/4f6c25b2a8bdf655aa1e1.jpg" })
-setting.status = new Date() * 1
-setting.bioUpdated = true
+await conn.updateProfileStatus(bio)
+//await delay(3 * 3000) 
+//await conn.updateProfilePicture(numBot, { url: "https://telegra.ph/file/84b0bad9adbbd5ed2b95e.jpg" })
+setting.status = new Date() * 1 
 } catch {
-console.log(`[𝚄𝙿𝙳𝙰𝚃𝙴] Error actualizando la bio.`)
-}}}
+console.log(`[𝚄𝙿𝙳𝙰𝚃𝙴]\n𝙿𝚒𝚗𝚐: ${latensi.toFixed(4)}`) 
+}}}*/
   
 //--------------------[ AUTOREAD ]-----------------------
 if (!conn.autoread && m.message && prefix) {
@@ -600,7 +592,7 @@ const mariafeature = () =>{
 //ARRANCA LA DIVERSIÓN   
 switch (prefix && command) {  
 case 'test': {
-const test = generateWAMessageFromContent(from, { viewOnceMessage: { message: { "messageContextInfo": { "deviceListMetadata": {}, "deviceListMetadataVersion": 2 }, interactiveMessage: proto.Message.InteractiveMessage.create({ body: proto.Message.InteractiveMessage.Body.create({ text: 'gey' }), footer: proto.Message.InteractiveMessage.Footer.create({ text: "" }), header: proto.Message.InteractiveMessage.Header.create({ title: "", subtitle: "", hasMediaAttachment: false }), nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({buttons: [ {"name": "single_select", "buttonParamsJson": `{"title":"Click", "sections":[{"title":"", "highlight_label": "", "rows":[ {"header":"", "title":"Velocidad", "description":"", "id":".ping"}, {"header":"", "title":"Estado", "description":"", "id":".estado"}, {"header":"", "title":"Menu", "description":"", "id":".menu"}]}]}`}]}), contextInfo: {mentionedJid: [m.sender], forwardingScore: 1, isForwarded: true,forwardedNewsletterMessageInfo: { newsletterJid: '120363167110224268@newsletter', newsletterName: 'Nova', serverMessageId: '' }}})}}}, {})     
+const test = generateWAMessageFromContent(from, { viewOnceMessage: { message: { "messageContextInfo": { "deviceListMetadata": {}, "deviceListMetadataVersion": 2 }, interactiveMessage: proto.Message.InteractiveMessage.create({ body: proto.Message.InteractiveMessage.Body.create({ text: 'gey' }), footer: proto.Message.InteractiveMessage.Footer.create({ text: "" }), header: proto.Message.InteractiveMessage.Header.create({ title: "", subtitle: "", hasMediaAttachment: false }), nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({buttons: [ {"name": "single_select", "buttonParamsJson": `{"title":"Click", "sections":[{"title":"", "highlight_label": "", "rows":[ {"header":"", "title":"Velocidad", "description":"", "id":".ping"}, {"header":"", "title":"Estado", "description":"", "id":".estado"}, {"header":"", "title":"Menu", "description":"", "id":".menu"}]}]}`}]}), contextInfo: {mentionedJid: [m.sender], forwardingScore: 1, isForwarded: true,forwardedNewsletterMessageInfo: { newsletterJid: '120363296103096943@newsletter', newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨', serverMessageId: '' }}})}}}, {})     
 const testI = generateWAMessageFromContent(m.key.remoteJid, { viewOnceMessage: { message: { "messageContextInfo": { "deviceListMetadata": {}, "deviceListMetadataVersion": 2 }, interactiveMessage: proto.Message.InteractiveMessage.create({ body: proto.Message.InteractiveMessage.Body.create({ text: '' }), footer: proto.Message.InteractiveMessage.Footer.create({ text: 'NovaBot' }), header: proto.Message.InteractiveMessage.Header.create({ title: 'Nova', subtitle: 'MarioJs', hasMediaAttachment: false }), nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.create({ buttons: [ { "name": "quick_reply", "buttonParamsJson": `{"display_text":"Menu","id":".menu"}` }, { "name": "quick_reply", "buttonParamsJson": `{"display_text":"Ping","id":".ping"}` }], })})}}}, {}) 
 //conn.relayMessage(test.key.remoteJid, test.message, { messageId: test.key.id }, {quoted: m})
 conn.relayMessage(testI.key.remoteJid, testI.message, { messageId: testI.key.id }, {quoted: m})
@@ -621,7 +613,7 @@ case 'yts': case 'playlist': case 'ytsearch': case 'acortar': case 'google': cas
 break   
  
 //jadibot/serbot  
-case 'sersamurai': case 'jadibot': case 'qr':
+case 'serbot': case 'jadibot': case 'qr':
 jadibot(conn, m, command, text, args, sender)
 break  
 case 'deljadibot': case 'stop': 
@@ -638,7 +630,7 @@ break
                         
 //Info  
 case 'menu': case 'help': case 'menucompleto': case 'allmenu': case 'menu2': case 'audio': case 'nuevo': case 'extreno': case 'reglas': case 'menu1': case 'menu3': case 'menu4': case 'menu5': case 'menu6': case 'menu7': case 'menu8': case 'menu9': case 'menu10': case 'menu11': case 'menu18': case 'descarga': case 'menugrupos': case 'menubuscadores': case 'menujuegos': case 'menuefecto': case 'menuconvertidores': case 'Menuhony': case 'menurandow': case 'menuRPG': case 'menuSticker': case 'menuOwner': menu(m, command, conn, prefix, pushname, sender, pickRandom, fkontak)  
-break        
+break  
 case 'estado': case 'infobot': case 'owner': case 'creador': case 'contacto': case 'grupos': case 'grupoficiales': case 'instalarbot': case 'crearbot': case 'ping': case '5492266613038': case '593980586516': case '595975740803': case 'report': case 'sc': case 'donar': case 'solicitud': case 'cuenta': case 'cuentas': case 'cuentaoficiales': case 'cuentaofc': case 'cafirexos': case 'Cafirexos': case 'velocidad': case 'status': case 'speedtest': case 'speed': case 'infohost': case 'host': info(command, conn, m, speed, sender, fkontak, pickRandom, pushname, from, msg, text) 
 break      
      
@@ -646,9 +638,50 @@ break
 case 'welcome': case 'bienvenida': case 'antilink': case 'antienlace': case 'antifake': case 'antiFake': case 'antiarabe': case 'antiArabe': case 'autodetect': case 'detect': case 'audios': case 'autosticker': case 'stickers': case 'modocaliente': case 'antinsfw': case 'modoadmin': case 'modoadmins': case 'soloadmin': case 'antiprivado': case 'antipv': case 'anticall': case 'antillamada': case 'modojadibot': case 'jadibot': case 'autoread': case 'autovisto': case 'antispam': case 'chatbot': case 'simsimi': case 'autolevelup': case 'autonivel': case 'antitoxic': case 'antilink2': case 'AntiTwiter': case 'antitwiter': case 'antitiktok': case 'AntiTikTok': case 'antitelegram': case 'AntiTelegram': case 'antifacebook': case 'AntiFb': case 'AntiFacebook': case 'antinstagram': case 'AntInstagram': case 'antiyoutube': case 'AntiYoutube': case 'AntiIg': case 'enable': case 'configuracion': case 'configurar': case 'antiviewonce': case 'game2': enable(m, command, isGroupAdmins, text, command, args, conn, isBotAdmins, isGroupAdmins, isCreator, conn) 
 break 
                               
-//Grupos            
+//Grupos    
 case 'grupo': case 'delete': case 'del': case 'join': case 'unete': case 'hidetag': case 'notificar': case 'tag': case 'setppgroup': case 'setpp': case 'setppname': case 'nuevonombre': case 'newnombre': case 'setdesc': case 'descripción': case 'anularlink': case 'resetlink': case 'revoke': case 'add': case 'agregar': case 'invitar': case 'kick': case 'echar': case 'sacar': case 'promote': case 'darpoder': case 'demote': case 'quitarpoder': case 'link': case 'linkgc': case 'banchat': case 'tagall': case 'invocar': case 'todos': case 'admins': case 'administradores': case 'infogrupo': case 'groupinfo': case 'warn': case 'advertencia': case 'unwarn': case 'quitardvertencia': case 'listwarn': case 'enline': case 'online': case 'listonine': case 'listaenlinea': case 'enlinea': case 'listonline': case 'setrules': case 'addrules': case 'addrule': case 'rules': case 'grouplist': case 'listgc': case 'fantasmas': grupo(m, command, isGroupAdmins, text, conn, participants, isBotAdmins, args, isCreator, delay, sender, quoted, mime, from, isCreator, groupMetadata, fkontak, delay) 
 break       
+
+case 'kickfantasmas': case 'kickfantasma': {
+ const { areJidsSameUser } = require('@whiskeysockets/baileys');
+if (!m.isGroup) return m.reply(info.group);  
+if (!isBotAdmins) return m.reply(info.botAdmin);  
+if (!isGroupAdmins) return m.reply(info.admin)
+const member = participants.map((u) => u.id);
+    if (!text) {
+        var sum = member.length;
+    } else {
+        var sum = text;
+    }
+    let total = 0;
+    const sider = [];
+    for (let i = 0; i < sum; i++) {
+        const users = m.isGroup ? participants.find((u) => u.id == member[i]) : {};
+        if ((typeof global.db.data.users[member[i]] == 'undefined' || global.db.data.users[member[i]].chat == 0) && !users.isAdmin && !users.isSuperAdmin) {
+            if (typeof global.db.data.users[member[i]] !== 'undefined') {
+                if (global.db.data.users[member[i]].whitelist == false) {
+                    total++;
+                    sider.push(member[i]);
+                }
+            } else {
+                total++;
+                sider.push(member[i]);
+            }
+        }
+    }
+    if (total == 0) {
+        return m.reply(`*⚠️ 𝐄𝐒𝐓𝐄 𝐆𝐑𝐔𝐏𝐎 𝐄𝐒 𝐀𝐂𝐓𝐈𝐕𝐎, 𝐍𝐎 𝐓𝐈𝐄𝐍𝐄 𝐅𝐀𝐍𝐓𝐀𝐒𝐌𝐀𝐒 :D*`);
+    }
+    conn.sendTextWithMentions(m.chat, `*[ ⚠️ 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙲𝙸𝙾𝙽 𝙳𝙴 𝙸𝙽𝙰𝙲𝚃𝙸𝚅𝙾𝚂 ⚠️ ]*\n\n*ɢʀᴜᴘᴏ:* ${groupMetadata.subject}\n*ᴍɪᴇᴍʙʀᴏs:* ${sum}\n\n*[ 👻 𝙵𝙰𝙽𝚃𝙰𝚂𝙼𝙰𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝙳𝙾 👻 ]*\n${sider.map((v) => '  👉🏻 @' + v.replace(/@.+/, '')).join('\n')}\n\n*𝙴𝙻 𝙱𝙾𝚃 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝚁𝙰 𝙻𝙰 𝙻𝙸𝚂𝚃𝙰 𝙼𝙴𝙽𝙲𝙸𝙾𝙽𝙰𝙳𝙰, 𝙴𝙼𝙿𝙴𝚉𝙰𝙳𝙾 𝙴𝙻 𝟷𝟶 𝚂𝙴𝙶𝚄𝙽𝙳𝙾𝚂, 𝚈 𝙲𝙰𝙳𝙰 𝟻 𝚂𝙴𝙶𝚄𝙽𝙳𝙾𝚂 𝙴𝙻𝙸𝙼𝙸𝙽𝙰𝚁𝙰́ 𝚄𝙽 𝙽𝚄𝙼𝙴𝚁𝙾`, m);
+// Espera 5 segundos antes de comenzar a eliminar
+await delay(5 * 1000);
+// Función para eliminar usuarios inactivos
+for (const user of sider) {
+await conn.groupParticipantsUpdate(m.chat, [user], 'remove');
+// Espera 5 segundos antes de eliminar el siguiente usuario
+await delay(5 * 1000);
+}}
+break;
 
 //juegos  
 case 'simi': case 'bot': case 'pregunta': case 'preg': case 'gay': case 'pareja': case 'formarpareja': case 'follar': case 'violar': case 'coger': case 'doxear': case 'doxxeo': case 'personalidad': case 'top': case 'topgays': case 'topotakus': case 'racista': case 'love': case 'ship': case 'formartrio': case 'formapareja5': case 'ruletas': case 'ruleta': case 'suerte': game(m, budy, command, text, pickRandom, pushname, conn, participants, sender, who, body, sendImageAsUrl)  
@@ -769,8 +802,29 @@ break
 //rpg  
 case 'reg': case 'verificar': case 'unreg': case 'myns': await reg(command, conn, m, sender, text, budy, fkontak, delay, args) 
 break     
-case 'lb': case 'leaderboard': case 'afk': case 'rob': case 'robar': case 'buy': case 'buyall': case 'bal': case 'balance': case 'diamond': case 'minar': case 'mine': case 'trabajar': case 'work': case 'w': case 'claim': case 'daily': case 'perfil': case 'levelup': case 'nivel': case 'cofre': case 'minar2': case 'mine2': case 'crime': case 'Crime': case 'dep': case 'depositar': case 'retirar': case 'toremove': rpg(m, command, participants, args, sender, pushname, text, conn, fkontak, who)    
-break             
+case 'lb': case 'leaderboard': case 'millonarios': case 'topmillonarios': case 'afk': case 'rob': case 'robar': case 'buy': case 'buyall': case 'bal': case 'balance': case 'diamond': case 'perro': case 'minar': case 'mine': case 'trabajar': case 'work': case 'w': case 'claim': case 'daily': case 'batalla2':  case 'batalla': case 'perfil': case 'levelup': case 'nivel': case 'cofre': case 'minar2': case 'mine2': case 'crime': case 'Crime': case 'dep': case 'depositar': case 'retirar': case 'toremove': case 'castillo': case 'fuente': case 'autobus': case 'helicóptero': case 'helicoptero': case 'ovni': case 'cohete': case 'avión': case 'avion': case 'ambulancia': case 'vehículo': case 'vehiculo': case 'moto': case 'motor': case 'auto': case 'autor': case 'impresora': case 'television': case 'daga': case 'reloj': case 'camara': case 'tridente': case 'lobos': case 'perro': case 'monos': case 'gato': rpg(m, command, participants, args, sender, pushname, text, conn, fkontak, who)     
+break                  
+  
+case 'transferir': case 'transfer': case 'regalar': {
+let items = ['money', 'exp', 'limit']
+this.confirm = this.confirm ? this.confirm : {}
+if (this.confirm[m.sender]) return conn.sendText(m.chat, `*⚠️ estas haciendo una transferencia*`, m)
+let user = global.db.data.users[m.sender]
+let item = items.filter((v) => v in user && typeof user[v] == 'number')
+let lol = `*⚠️ Uso correcto del comando :*\n*${prefix + command}* [tipo] [cantidad] [@user]\n\n> *Ejemplo :*
+• ${prefix + command} exp 100 @0\n\n📍 Artículos transferibles\n╔═════ೋೋ═════╗\n● *limit* = Diamante\n● *exp* = Experiencia\n● *money* = coins\n╚════ ≪ •❈• ≫ ════╝`
+let type = (args[0] || '').toLowerCase()
+if (!item.includes(type)) return conn.sendTextWithMentions(m.chat, lol, m)
+let count = Math.min(Number.MAX_SAFE_INTEGER, Math.max(1, (isNumber(args[1]) ? parseInt(args[1]) : 1))) * 1
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : args[2] ? (args[2].replace(/[@ .+-]/g, '') + '@s.whatsapp.net') : ''
+if (!who) return conn.sendMessage(m.chat, {text: '*⚠️ Etiquetas al usuario que desea hacer la transferencia.*', mentions: [m.sender]}, {quoted: m});
+if (!(who in global.db.data.users)) return m.reply('*❌ El Usuario no está en mi base de datos*')
+if (user[type] * 1 < count) return m.reply(`*⚠️ No tienes suficientes ${type} para transferir*`)
+let confirm = `¿ESTA SEGURO QUE DESEA TRANSFERIR ${count} ${type} a @${(who || '').replace(/@s\.whatsapp\.net/g, '')}?\n\n> *Tienes 60 segundos para confirmar*\n\n*• Escriba:*\n* si = *para acertar*\n* no = *para cancelar*`
+await conn.sendTextWithMentions(m.chat, confirm, m)
+this.confirm[m.sender.split('@')[0]] = { sender: m.sender, to: who, message: m, type, count, timeout: setTimeout(() => (m.reply(`*⚠️ Se acabó el tiempo, no se obtuvo respuesta. Transferencia cancelada.*`), delete this.confirm[m.sender.split('@')[0]]), 60 * 1000)}}
+break
+      
 case 'transferir': case 'transfer': case 'regalar': {
 let items = ['money', 'exp', 'limit']
 this.confirm = this.confirm ? this.confirm : {}
@@ -789,11 +843,61 @@ let confirm = `${lenguaje.transfer.text9} ${count} ${type} a @${(who || '').repl
 await conn.sendTextWithMentions(m.chat, confirm, m)
 this.confirm[m.sender.split('@')[0]] = { sender: m.sender, to: who, message: m, type, count, timeout: setTimeout(() => (m.reply(`${lenguaje.transfer.text11}`), delete this.confirm[m.sender.split('@')[0]]), 60 * 1000)}}
 break
-      
+
+case 'proyectos': case 'proyecto':
+  conn.sendButton(
+    m.chat,
+    `
+𝐆𝐫𝐚𝐜𝐢𝐚𝐬 𝐩𝐨𝐫 𝐞𝐬𝐭𝐚𝐫 𝐢𝐧𝐭𝐞𝐫𝐞𝐬𝐚𝐝𝐨 𝐞𝐧 𝐥𝐨𝐬 𝐩𝐫𝐨𝐲𝐞𝐜𝐭𝐨𝐬 𝐝𝐞 𝐦𝐢 𝐜𝐫𝐞𝐚𝐝𝐨𝐫
+𝐥𝐨𝐬 𝐩𝐫𝐨𝐲𝐞𝐜𝐭𝐨𝐬 𝐬𝐨𝐧:
+
+- 𝐘𝐮𝐆𝐢-𝐁𝐎𝐓 GitHub
+- 𝐚𝐧𝐬𝐢-𝐁𝐎𝐓 GitHub
+- 𝐒𝐮𝐩𝐫𝐚-𝐁𝐎𝐓 GitHub
+    `,
+    botname,
+    null,
+    [
+      ['IR AL MENU', `${prefix}menu`],
+      ['Menú completo', `${prefix}allmenu`],
+      ['Velocidad', `${prefix}status`]
+    ],
+    null,
+    null,
+    m
+  );
+  break;
+
+  
 //stickers   
 case 's': case 'sticker': case 'wm': case 'take': case 'attp': case 'dado': case 'qc': stickers(m, command, conn, mime, quoted, args, text, lolkeysapi, fkontak)   
 break
- 
+
+case 'alguien': {
+let vid = 'https://telegra.ph/file/c3a28b6aeb99383c68847.mp4'
+conn.sendMessage(m.chat, {video: {url: vid}, caption: ``}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
+break 
+
+case 'naturaleza': {
+let vid = 'https://telegra.ph/file/a571af10458cb8eff9e0e.mp4'
+conn.sendMessage(m.chat, {video: {url: vid}, caption: ``}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
+break
+
+case 'coco': {
+let vid = 'https://telegra.ph/file/c6a0c80f45b148f725d54.mp4'
+conn.sendMessage(m.chat, {video: {url: vid}, caption: ``}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
+break
+
+case 'webadas': {
+let vid = 'https://telegra.ph/file/e84ee5546903a1b472626.mp4'
+conn.sendMessage(m.chat, {video: {url: vid}, caption: ``}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
+break
+
+case 'rie': {
+let vid = 'https://telegra.ph/file/22f7b8d9472becee6a169.mp4'
+conn.sendMessage(m.chat, {video: {url: vid}, caption: ``}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
+break
+
 case 'bin': {
 if (!isPrems) return m.reply(info.premium) 	
 if (!text) return m.reply(`⚠️Ingrese el número BIN\n*🔐 Algunos bin disponible :*\n• ${prefix + command} 539083\n• ${prefix + command} 464622\n• ${prefix + command} 464625\n• ${prefix + command} 464627`);
@@ -807,7 +911,28 @@ console.log(error);
 m.reply('Ocurrió un error al consultar la API');
 })}
 break;
-                           
+case 'addowner': {
+if (!isCreator) return reply(info.owner)
+const who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false;
+if (!who) return conn.sendTextWithMentions(m.chat, `⚠️ Uso incorrecto del comando.*\n\n*❥ Ejemplo:* ${prefix + command} @0`);    
+const nuevoNumero = who;
+global.owner.push([nuevoNumero]);
+await m.reply('⚠️ *Nuevo número agregado con éxito a la lista de owners.*')}
+break;     
+
+case 'delowner': {
+if (!isCreator) return reply(info.owner)
+const who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false;
+const numeroAEliminar = who;
+const index = global.owner.findIndex(owner => owner[0] === numeroAEliminar);
+if (index !== -1) {
+global.owner.splice(index, 1);
+await m.reply('*[❗] El número fue eliminado con éxito de la lista de owners.*');
+} else {
+await m.reply('*[❗] El número ingresado no existe en la lista de owners.*');
+}}
+break;
+              
 //idiomas 
 case 'idioma': case 'Language': case 'idiomas': {
     let user = global.db.data.users[m.sender];
@@ -830,7 +955,7 @@ case 'idioma': case 'Language': case 'idiomas': {
             idiomas = 'español';
         } else {
             // Si el input no es `1`, puedes manejar el caso en el que se devuelve un mensaje de error o una advertencia.
-            m.reply('*en este momento solo contamos con español intenta de nuevo esta ves cln 1*');
+            m.reply('Por el momento solo contamos con español');
             return;
         }
 
@@ -840,7 +965,7 @@ case 'idioma': case 'Language': case 'idiomas': {
         m.reply(lenguaje.AvisoMG() + lenguaje.idioma(prefix));
     }
 }
-break;  
+break;
 
 case 'nowa':  {
 let regex = /x/g  
@@ -941,7 +1066,7 @@ try {
 let stdout = execSync('git pull' + (m.fromMe && q ? ' ' + q : ''))
 await m.reply(stdout.toString())
 } catch { 
-let updatee = execSync('git remote set-url origin https://github.com/Eliasar54/SAMURAI-BOT.git && git pull')
+let updatee = execSync('git remote set-url origin https://github.com/Eliasar54/ansi-BOT-MD && git pull')
 await m.reply(updatee.toString())}  
 break
 case 'reiniciar': case 'restart':
@@ -981,7 +1106,7 @@ if (media === 'texto')
 m.reply('*Mi jefe no me quiere 😢*')        
 if (media === 'sticker')         
 conn.sendFile(m.chat, e, 'sticker.webp', '',m, true, { contextInfo: { forwardedNewsletterMessageInfo: { newsletterJid: '120363160031023229@newsletter', serverMessageId: '', newsletterName: 'INFINITY-WA 💫' }, forwardingScore: 9999999, isForwarded: true, 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: 'ᶜ ᴬᵘᵗᵒᵈᵉˢᶜʳᵘʸᵉ', mediaType: 2, sourceUrl: nna, thumbnail: imagen1}}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
-if (budy.includes(`Samurai`) || budy.includes(`samurai`)) {
+if (budy.includes(`Ansi`) || budy.includes(`Ansi-BOT`) || budy.includes(`BOT`) || budy.includes(`ANSi`)) {
 m.react(`${pickRandom(['🌟', '👀', '🤑'])}`)}
 if (budy.includes(`Avisos`) || budy.includes(`Atencion`)) {
 m.react(`${pickRandom(['📢', '👀', '⚠️'])}`)}
@@ -992,7 +1117,7 @@ let noetiqueta = 'https://qu.ax/lqFC.webp'
 let or = ['texto', 'sticker']; 
 let media = or[Math.floor(Math.random() * 2)]
 if (media === 'sticker')     
-conn.sendFile(m.chat, noetiqueta, 'sticker.webp', '',m, true, { contextInfo: { forwardedNewsletterMessageInfo: { newsletterJid: '120363160031023229@newsletter', serverMessageId: '', newsletterName: 'INFINITY-WA 💫' }, forwardingScore: 9999999, isForwarded: true, 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: 'Yo que?', mediaType: 2, sourceUrl: nna, thumbnail: imagen1}}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+conn.sendFile(m.chat, noetiqueta, 'sticker.webp', '',m, true, { contextInfo: { forwardedNewsletterMessageInfo: { newsletterJid: '120363295950653343@newsletter', serverMessageId: '', newsletterName: 'YuGi-BOT' }, forwardingScore: 9999999, isForwarded: true, 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: 'Yo que?', mediaType: 2, sourceUrl: nna, thumbnail: imagen1}}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 if (media === 'texto')
 await conn.sendMessage(m.chat, {text: `${pickRandom(['*QUE YO QUE?*', 'Que?'])}`}, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})}
 if (budy.includes(`Yaoi`)) {
@@ -1055,6 +1180,9 @@ conn.sendAudio(m.chat, vn, m)}
 if (budy.startsWith(`VAMOOO`)) {
 const vn = 'https://qu.ax/XGAp.mp3'
 conn.sendAudio(m.chat, vn, m)}
+if (budy.startsWith(`Estoy cansado`)) {
+const vn = 'https://tinyurl.com/2a47vcgk'
+conn.sendAudio(m.chat, vn, m)}
 if (budy.startsWith(`Hora del sexito`)) {
 const vn = 'https://qu.ax/Jpjm.mp3'
 conn.sendAudio(m.chat, vn, m)}
@@ -1077,7 +1205,9 @@ let or = ['sticker', 'audio'];
 let media = or[Math.floor(Math.random() * 2)] 
 if (media === 'sticker') conn.sendFile(m.chat, stic, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: `${pushname}`, mediaType: 2, sourceUrl: md, thumbnail: imagen1}}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})   
 if (media === 'audio') conn.sendAudio(m.chat, vn, m)}
+if (media === 'sticker') conn.sendFile(m.chat, stic, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: `${pushname}`, mediaType: 2, sourceUrl: nn2, thumbnail: imagen4}}}, { quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 if (budy.startsWith(`La toca 7w7`)) {
+
 const vn = 'https://qu.ax/Payh.mp3'
 conn.sendAudio(m.chat, vn, m)}
 if (budy.startsWith(`Quien es tu sempai botsito`)) {
@@ -1226,7 +1356,7 @@ conn.copyNForward(m.chat, msgs[budy.toLowerCase()], true)
  
 //--------------------[ REPORTE/ERRORS ]-----------------------     
 let e = String(err) 
-conn.sendMessage("50582340051@s.whatsapp.net", { text: "Hola Creador/desarrollador, parece haber un error, por favor arreglarlo 🥲\n\n" + util.format(e), 
+conn.sendMessage("50582382653@s.whatsapp.net", { text: "Hola Creador/desarrollador, parece haber un error, por favor arreglarlo 🥲\n\n" + util.format(e), 
 contextInfo:{forwardingScore: 9999999, isForwarded: false }})
 process.on('uncaughtException', function (err) {
 console.log('Caught exception: ', err)})}}}}

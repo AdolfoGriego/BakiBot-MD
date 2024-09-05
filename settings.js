@@ -1,25 +1,34 @@
-const fs = require('fs') 
+const fs = require('fs')
 const path = require('path')
-const chalk = require('chalk') 
-const { en, es, ar, id, pt, rs} = require('./libs/idiomas/total-idiomas.js') 
+const chalk = require('chalk')
+const { en, es, ar, id, pt, rs } = require('./libs/idiomas/total-idiomas.js')
+const axios = require('axios')
 
 //---------[ PROPIETARIO/OWNER ]---------
-global.owner = [["528451003894", "î.am/★𝐀𝐝𝐨𝐥𝐟𝐨𝐆𝐫𝐢𝐞𝐠𝐨★.exe", true], ["593968585383"], ["5492266466080"], ["595986172767"], ["5492266613038"], ["5217294888993"], ["5214434703586"], ["5214437863111"], ["51906662557"], ["595992302861"], ["5217441298510"], ["5491155983299"], ["5493795319022"], ["5217821153974"], ["573012482597"]]
+global.owner = [["50582340051", "Owner", true], ["595984838201"], ["51918534156"], ["123456789"]]
 global.mods = []
-global.premium = []  
-global.blockList = []  
+global.premium = []
+global.blockList = []
 
 //---------[ NOMBRE/INFO ]---------
-global.botname = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️"
-global.wm = '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️'
-global.vs = '1.0 (beta)'
+global.pagina = "atom.bio/blogansi"
+global.botname = "✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨"
+global.wm = '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨'
+global.vs = '1.2'
+global.creador = '𝐸𝐿𝐼𝐴𝑆𝐴𝑅 𝑌𝑇'
+global.creador2 = 'ELIASAR YT'
+global.name = '𝑪𝑹𝑬𝑨𝑫𝑶𝑹'
+global.nunber = Math.floor(Math.random() * (27 - 18 + 1)) + 18;
+
+
+
 
 //Función beta : escribe el número que quiere que sea bot para que mande el Código de 8 digitos
-global.botNumberCode = "" //Ejemplo: +528451003894
+global.botNumberCode = "" //Ejemplo: +59309090909
 global.phoneNumber = ""
 
 //---------[ FECHA/IDIOMAS ]---------
-global.place = 'America/Thule' // Aquí puedes encontrar tu ubicación https://momentjs.com/timezone/
+global.place = 'America/Managua' // Aquí puedes encontrar tu ubicación https://momentjs.com/timezone/
 global.lenguaje = es //Predeterminado en idioma Español 
 global.prefix = [`/`]
 
@@ -71,27 +80,39 @@ global.APIKeys = {
 };
  
 //---------[ STICKERS ]---------
-global.packname = "𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️"
-global.author = `${vs}`
-
- global.catalogo = "https://qu.ax/WlyB.jpg"
+global.packname = ""
+global.author = `{
+ "bot": "✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨"
+  "autor": "Eliasar YT",
+  "version": "1.2",
+  "creador": "Eliasar YT"
+}
+`
  
- //-----[Estilo]------------
- global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount : -888888, status: 1, surface : 1, message: botname, orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
- 
-//---------[ IMAGEN ]---------
-global.img = "https://qu.ax/WlyB.jpg"
-global.img1 = 'https://qu.ax/WlyB.jpg'
-global.img2 = 'https://qu.ax/WlyB.jpg'
-global.vid1 = "https://telegra.ph/file/4e1a3ae13b9bf62466560.jpg"
+//-----------------IMAGENES---------
+global.vid1 = "https://a.uguu.se/pgQUNPne.mp4"
+global.img = "https://tinyurl.com/23s36pbo";
+global.img1 = 'https://tinyurl.com/29nl4hec';
+global.img2 = 'https://tinyurl.com/22qrb3o7';
+global.img3 = 'https://tinyurl.com/258vvxaf';
+global.img4 = 'https://tinyurl.com/263bj3ce';
+global.img5 = 'https://tinyurl.com/2bsdv7rf';
+global.img6 = 'https://tinyurl.com/28wlqbyy';
+global.img7 = 'https://tinyurl.com/2922qvl9';
+global.img8 = 'https://tinyurl.com/2cbdu8ce';
+global.img9 = 'https://tinyurl.com/2cogrq3o';
 
-global.imagen1 = "https://telegra.ph/file/4f6c25b2a8bdf655aa1e1.jpg"
-global.imagen2 = "https://telegra.ph/file/c8167988aba0d9a51db70.jpg"
-global.imagen3 = "https://telegra.ph/file/5a3718c100e3dd9d57f3e.jpg"
-global.noperfil = "https://telegra.ph/file/4f6c25b2a8bdf655aa1e1.jpg"
+
+global.imagen1 = fs.readFileSync('./media/menu.jpg')
+global.imagen2 = fs.readFileSync('./media/menu2.jpg')
+global.imagen3 = fs.readFileSync('./media/menu3.jpg')
+global.imagen4 = fs.readFileSync('./media/menu4.jpg')
+global.imagen5 = fs.readFileSync('./media/menu5.jpg')
+global.noperfil = fs.readFileSync('./media/sinfoto.jpg')
+global.verificar = fs.readFileSync('./media/menu2.jpg')
 
 //---------[ ENLACES ]---------
-global.md = 'https://github.com/AdolfoGriego/BakiBot-MD'
+global.md = 'https://github.com/Eliasar54/ansi-BOT-MD.git'
 global.yt = 'https://www.youtube.com/@Eliasar_yt'
 global.tiktok = 'https://www.tiktok.com/@eliasar_yt?_t=8mjJpoJfOBK&_r=1'
 global.fb = 'https://www.facebook.com/profile.php?id=100087710532984&mibextid=kFxxJD'
@@ -105,18 +126,18 @@ global.nn2 = 'https://chat.whatsapp.com/CPGKvG1sV3v4wOwF6c1UiD' //Loli & Nova
 global.nn3 = 'https://chat.whatsapp.com/CPGKvG1sV3v4wOwF6c1UiD' //Grupo de Colaboracion
 global.nn4 = 'https://chat.whatsapp.com/CPGKvG1sV3v4wOwF6c1UiD' // Grupo COL 2
 global.nn5 = 'https://chat.whatsapp.com/CPGKvG1sV3v4wOwF6c1UiD' //Grupo COL 3
-global.nn6 = 'https://chat.whatsapp.com/JHnIQUdCGBHHsA6naIGjHG' //test
-global.nn7 = 'https://chat.whatsapp.com/GFgaQyuU6Ux92CZ6WkrJV3' //Grupo ayuda sobre el bot
-global.nn8 = 'https://chat.whatsapp.com/JHnIQUdCGBHHsA6naIGjHG' //enlace YuGi-BOT
+global.nn6 = 'https://chat.whatsapp.com/CPGKvG1sV3v4wOwF6c1UiD' //test
+global.nn7 = 'https://chat.whatsapp.com/CPGKvG1sV3v4wOwF6c1UiD' //Grupo ayuda sobre el bot
+global.nn8 = 'https://chat.whatsapp.com/CPGKvG1sV3v4wOwF6c1UiD' //enlace YuGi-BOT
 global.multi = 'https://chat.whatsapp.com/CBY978TEw5N10tRhQiapZV' //Grupo náufrazapp
-global.nna2 = 'https://github.com/Eliasar54/SAMURAI-BOT'
-global.n2 = "https://whatsapp.com/channel/0029Vae6j714Y9loutP3Au29"
+global.nna2 = 'JHnIQUdCGBHHsA6naIGjHG'
+global.n2 = "https://whatsapp.com/channel/0029VadxAUkKLaHjPfS1vP36"
 //---------[ INFO ]--------- 
-global.info = { wait: '*⌛ _Cargando..._ ▬▭▭▭▭▭▭*', 
-waitt: '*⌛ _Cargando..._ ▬▬▭▭▭*', 
-waittt: '*⌛ _Cargando..._ ▬▬▬▬▭▭*', 
-waitttt: '*⌛ _Cargando..._ ▬▬▬▬▬▬▭*', 
-waittttt: '*⌛ _Cargando..._ ▬▬▬▬▬▬▬*', 
+global.info = { wait: '*_■■□□□40%_*', 
+waitt: '*_■■■□□60%_*', 
+waittt: '*_■■■■□80%_*', 
+waitttt: '*_■■■■□90%_*', 
+waittttt: '*_■■■■■100%_*', 
 result: `${lenguaje['exito']()}`,  
 admin: `${lenguaje['admin']()}`, 
 botAdmin: `${lenguaje['botAdmin']()}`, 
@@ -131,14 +152,14 @@ registra: `${lenguaje['registra']()}`,
 limit: `${lenguaje['limit']()}`, 
 AntiNsfw: `${lenguaje['AntiNsfw']()}`,
 endLimit: `${lenguaje['endLimit']()}`, }
-global.rwait = '🕛'
-global.dmoji = '🧐'
-global.done = '⚔️'
-global.error = '😖' 
-global.xmoji = '🥵' 
+global.rwait = '⏳'
+global.dmoji = '😅'
+global.done = '✔️'
+global.error = '⚠️'
+global.xmoji = '💥'
 
 //---------------[ NIVELES, ADVERTENCIA ]----------------
-global.multiplier = 180 // Cuanto más alto, más difícil subir de nivel 
+global.multiplier = 100 // Cuanto más alto, más difícil subir de nivel 
 global.maxwarn = '4' // máxima advertencias 
 
 //----------------------------------------------------

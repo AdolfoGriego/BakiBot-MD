@@ -1,4 +1,4 @@
-//Código editado por AdolfoGriego
+//Código editado por Eliasar YT
 (async () => {
 require("./settings")
 const { default: makeWASocket, CONNECTING, PHONENUMBER_MCC, Browsers, makeInMemoryStore, useMultiFileAuthState, DisconnectReason, proto , jidNormalizedUser,WAMessageStubType, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, msgRetryCounterMap, makeCacheableSignalKeyStore, fetchLatestBaileysVersion, getAggregateVotesInPollMessage } = require("@whiskeysockets/baileys")
@@ -180,21 +180,21 @@ opcion = '1'
 }
 if (!methodCodeQR && !methodCode && !fs.existsSync(`./sessions/creds.json`)) {
     do {
-    let lineM = '───────────────────────'
-opcion = await question(`╔${lineM}╗
-║ ${chalk.whiteBright('╔═──────═╗')}
-║ ${chalk.whiteBright('║')} ${chalk.black.bgWhiteBright.bold.cyan(lenguaje.console.text1)}
-║ ${chalk.whiteBright('╚═──────═╝')}   
-║ ${chalk.whiteBright('╔═──────═╗')}     
-║ ${chalk.whiteBright('║')} ${chalk.white.bgGreen.bold.yellow(lenguaje.console.text2)}
-║ ${chalk.whiteBright('║')} ${chalk.bold.white(lenguaje.console.text3)} ${chalk.greenBright(lenguaje.console.text4)}
-║ ${chalk.whiteBright('║')} ${chalk.bold.white(lenguaje.console.text5)} ${chalk.greenBright(lenguaje.console.text6)}
-║ ${chalk.whiteBright('╚═──────═╝')}
-║ ${chalk.whiteBright('╔═──────═╗')}     
-║ ${chalk.whiteBright('║')} ${chalk.italic.gray(lenguaje.console.text7)}
-║ ${chalk.whiteBright('║')} ${chalk.italic.gray(lenguaje.console.text8)}
-║ ${chalk.whiteBright('╚═──────═╝')}
-╚${lineM}╝\n${chalk.bold.whiteBright('---> ')}`)
+        let lineM = '━━━━━━━━━━━━━━━━━━━━'
+        opcion = await question(`╔${lineM}╗
+║ ${chalk.blueBright('╔═════════════════╗')}
+║ ${chalk.blueBright('║')} ${chalk.blue.bgBlue.bold.cyan(lenguaje.console.text1)}
+║ ${chalk.blueBright('╚═════════════════╝')}   
+║ ${chalk.blueBright('╔═════════════════╗')}     
+║ ${chalk.blueBright('║')} ${chalk.green.bgMagenta.bold.yellow(lenguaje.console.text2)}
+║ ${chalk.blueBright('║')} ${chalk.bold.redBright(lenguaje.console.text3)} ${chalk.greenBright(lenguaje.console.text4)}
+║ ${chalk.blueBright('║')} ${chalk.bold.redBright(lenguaje.console.text5)} ${chalk.greenBright(lenguaje.console.text6)}
+║ ${chalk.blueBright('╚═════════════════╝')}
+║ ${chalk.blueBright('╔═════════════════╗')}     
+║ ${chalk.blueBright('║')} ${chalk.italic.magenta(lenguaje.console.text7)}
+║ ${chalk.blueBright('║')} ${chalk.italic.magenta(lenguaje.console.text8)}
+║ ${chalk.blueBright('╚═════════════════╝')}
+╚${lineM}╝\n${chalk.bold.magentaBright('---> ')}`)
 
         if (!/^[1-2]$/.test(opcion)) {
             console.log(chalk.bold.redBright(`${lenguaje.console.text9(chalk)}`))
@@ -211,7 +211,7 @@ printQRInTerminal: opcion == '1' ? true : methodCodeQR ? true : false,
 logger: pino({ level: 'silent' }),
 auth: { creds: state.creds, keys: makeCacheableSignalKeyStore(state.keys, pino({level: 'silent'})) },
 mobile: MethodMobile, 
-browser: opcion == '1' ? ['𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃', 'Safari', '1.0.0'] : methodCodeQR ? ['𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃', 'Safari', '1.0.0'] : ["Ubuntu", "Chrome", "20.0.04"],
+browser: opcion == '1' ? ['𝐚𝐧𝐬í-𝐁𝐎𝐓', 'Safari', '1.0.0'] : methodCodeQR ? ['𝐚𝐧𝐬í-𝐁𝐎𝐓', 'Safari', '1.0.0'] : ["Ubuntu", "Chrome", "20.0.04"],
 markOnlineOnConnect: true, 
 generateHighQualityLinkPreview: true, 
 syncFullHistory: true,
@@ -313,8 +313,8 @@ for (let fucker of fuckedcall) {
 if (fucker.isGroup == false) {
 if (fucker.status == "offer") {
 let call = await sock.sendTextWithMentions(fucker.from, `*[ ! ] @${fucker.from.split('@')[0]} ${lenguaje['smscall']()} ${fucker.isVideo ? `videollamadas` : `llamadas` }_\n\n${lenguaje['smscall2']()}\n\n• ${fb}`)
-let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:; AdolfoGriego👑;;;\nFN: AdolfoGriego\nORG: AdolfoGriego👑\nTITLE:\nitem1.TEL;waid=528451003894:+528451003894\nitem1.X-ABLabel:Propietario 👑\nX-WA-BIZ-DESCRIPTION:ᴇsᴄʀɪʙɪ sᴏʟᴏ ᴘᴏʀ ᴄᴏsᴀs ᴅᴇʟ ʙᴏᴛ.\nX-WA-BIZ-NAME:Owner 👑\nEND:VCARD`
-sock.sendMessage(fucker.from, { contacts: { displayName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️', contacts: [{ vcard }] }}, {quoted: call, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
+let vcard = `BEGIN:VCARD\nVERSION:3.0\nN:; Eliasar YT👑;;;\nFN: Eliasar YT\nORG: Eliasar YT👑\nTITLE:\nitem1.TEL;waid=50582340051:+50582340051\nitem1.X-ABLabel:Propietario 👑\nX-WA-BIZ-DESCRIPTION:ᴇsᴄʀɪʙɪ sᴏʟᴏ ᴘᴏʀ ᴄᴏsᴀs ᴅᴇʟ ʙᴏᴛ.\nX-WA-BIZ-NAME:Owner 👑\nEND:VCARD`
+sock.sendMessage(fucker.from, { contacts: { displayName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨', contacts: [{ vcard }] }}, {quoted: call, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 await sleep(8000)
 await sock.updateBlockStatus(fucker.from, "block")
 }}}})
@@ -331,15 +331,15 @@ await sleep(2000)
 try {
 ppgroup = await sock.profilePictureUrl(anu.id, 'image')
 } catch (err) {
-ppgroup = 'https://ibb.co/vLZ0mv0/avatar-group-large-v2.png?q=60'
+ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 }
 //let text = ``
 sock.sendMessage(res.id, {text: lenguaje['smsAvisos2'](),  
 contextInfo:{  
 forwardedNewsletterMessageInfo: { 
-newsletterJid: '120363297379773397@newsletter', 
+newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, 
 forwardingScore: 9999999,  
 isForwarded: true,   
 mentionedJid:[m.sender],  
@@ -358,16 +358,16 @@ await sleep(2000)
 try {
 ppgroup = await sock.profilePictureUrl(anu.id, 'image')
 } catch (err) {
-ppgroup = 'https://ibb.co/vLZ0mv0/avatar-group-large-v2.png?q=60'
+ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 }
 //let text = `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n*ᴬʰᵒʳᵃ ᵗᵒᵈᵒˢ ˡᵒˢ ᵖᵃʳᵗᶦᶜᶦᵖᵃⁿᵗᵉˢ ᵖᵘᵉᵈᵉⁿ ᵐᵃⁿᵈᵃʳ ᵐᵉⁿˢᵃʲᵉˢ 🗣️*`
 sock.sendMessage(res.id, {   
 text: lenguaje['smsAvisos4'](),  
 contextInfo:{  
 forwardedNewsletterMessageInfo: { 
-newsletterJid: '120363297379773397@newsletter', 
+newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, 
 forwardingScore: 9999999,  
 isForwarded: true,    
 mentionedJid:[m.sender],  
@@ -386,15 +386,15 @@ await sleep(2000)
 try {
 ppgroup = await sock.profilePictureUrl(anu.id, 'image')
 } catch (err) {
-ppgroup = 'https://ibb.co/vLZ0mv0/avatar-group-large-v2.png?q=60'
+ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 }
 //let text = `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n*ᴬʰᵒʳᵃ ˢᵒˡᵒ ˡᵒˢ ᵃᵈᵐᶦⁿˢ ᵖᵘᵉᵈᵉ ᵉᵈᶦᵗᵃʳ ˡᵒˢ ᵃʲᵘˢᵗᵉ ᵈᵉˡ ᵍʳᵘᵖᵒ*`
 sock.sendMessage(res.id, {text: lenguaje['smsAvisos6'](),
 contextInfo:{ 
 forwardedNewsletterMessageInfo: { 
-newsletterJid: '120363297379773397@newsletter', 
+newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, 
 forwardingScore: 9999999,  
 isForwarded: true,   
 mentionedJid:[m.sender],  
@@ -414,15 +414,15 @@ await sleep(2000)
 try {
 ppgroup = await sock.profilePictureUrl(anu.id, 'image')
 } catch (err) {
-ppgroup = 'https://ibb.co/vLZ0mv0/avatar-group-large-v2.png?q=60'
+ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 }
 //let text = `「 𝐀𝐉𝐔𝐒𝐓𝐄𝐒 𝐃𝐄𝐋 𝐆𝐑𝐔𝐏𝐎 」\n\n*ᴬʰᵒʳᵃ ᵗᵒᵈᵒˢ ˡᵒˢ ᵖᵃʳᵗᶦᶜᶦᵖᵃʳᵗᵉ ᵖᵘᵉᵈᵉ ᵉᵈᶦᵗᵃʳ ˡᵒˢ ᵃʲᵘˢᵗᵉ ᵈᵉˡ ᵍʳᵘᵖᵒ*`
 sock.sendMessage(res.id, {text: lenguaje['smsAvisos7'](),  
 contextInfo:{  
 forwardedNewsletterMessageInfo: { 
-newsletterJid: '120363297379773397@newsletter', 
+newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, 
 forwardingScore: 9999999,  
 isForwarded: true,   
 mentionedJid:[m.sender],  
@@ -442,15 +442,15 @@ await sleep(2000)
 try {
 ppgroup = await sock.profilePictureUrl(anu.id, 'image')
 } catch (err) {
-ppgroup = 'https://ibb.co/vLZ0mv0/avatar-group-large-v2.png?q=60'
+ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 }
 let text = `${lenguaje['smsAvisos8']()}\n${res.desc}`
 sock.sendMessage(res.id, {text: text,  
 contextInfo:{  
 forwardedNewsletterMessageInfo: { 
-newsletterJid: '120363297379773397@newsletter', 
+newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, 
 forwardingScore: 9999999,  
 isForwarded: true,   
 mentionedJid:[m.sender],  
@@ -470,15 +470,15 @@ await sleep(2000)
 try {
 ppgroup = await sock.profilePictureUrl(anu.id, 'image')
 } catch (err) {
-ppgroup = 'https://ibb.co/vLZ0mv0/avatar-group-large-v2.png?q=60'
+ppgroup = 'https://i.ibb.co/RBx5SQC/avatar-group-large-v2.png?q=60'
 }
 let text = `${lenguaje['smsAvisos9']()}\n${res.subject}`
 sock.sendMessage(res.id, {text: text,  
 contextInfo:{  
 forwardedNewsletterMessageInfo: { 
-newsletterJid: '120363297379773397@newsletter', 
+newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, 
 forwardingScore: 9999999,  
 isForwarded: true,   
 mentionedJid:[m.sender],  
@@ -535,7 +535,7 @@ sock.sendMessage(anu.id, { audio: { url: vn },
 contextInfo: { forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, forwardingScore: 9999999, isForwarded: true, mentionedJid:[num], "externalAdReply": { 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, forwardingScore: 9999999, isForwarded: true, mentionedJid:[num], "externalAdReply": { 
 "title": `乂 ＷＥＬＣＯＭＥ 乂`, 
 "body": `${name.split("@")[0]}`, 
 "previewType": "PHOTO", 
@@ -549,7 +549,7 @@ sock.sendMessage(anu.id, { text: `${lenguaje['smsWel7']()} ${lenguaje['smsWel'](
 forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, 
 forwardingScore: 9999999,
 isForwarded: true, 
 mentionedJid:[num],
@@ -574,12 +574,12 @@ let bye = by[Math.floor(Math.random() * by.length)]
 if (media === 'texto')
 sock.sendMessage(anu.id, { text: bye, mentions: [num]}, {quoted: null, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100})
 if (media === 'texto2')
-sock.sendMessage(anu.id, { text: `\`\`\`[!] Un guerrero a dejado la batalla @${name.split("@")[0]}.\`\`\``,
+sock.sendMessage(anu.id, { text: `\`\`\`[!] Un miembro ha salido del grupo: @${name.split("@")[0]} 🫡. Esperamos no verte de nuevo.\`\`\``,
 contextInfo:{
 forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, 
 forwardingScore: 9999999,
 isForwarded: true,  
 mentionedJid:[num],
@@ -605,7 +605,7 @@ sock.sendMessage(anu.id, { text: `${pickRandom(['[ NUEVO ADMINS ]\n\n', 'Hey'])}
  forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, 
 forwardingScore: 9999999,
 isForwarded: true, 
  mentionedJid: [num, usuario],
@@ -626,7 +626,7 @@ sock.sendMessage(anu.id, { text: `@${name.split("@")[0]} ${pickRandom(['Joderte 
  forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363296103096943@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: '✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨' }, 
 forwardingScore: 9999999,
 isForwarded: true, 
  mentionedJid:[num, usuario],
@@ -653,19 +653,11 @@ const { connection, lastDisconnect, qr, receivedPendingNotifications, isNewLogin
 console.log(receivedPendingNotifications)
 if (isNewLogin) sock.isInit = true
 if (connection == 'connecting') {
-console.log(chalk.red('iniciando✨...'));
-console.log(chalk.green('ya casi...'));
-console.log(chalk.blue('listo✨...')); // Cambiado a azul
-say('baki\nbot', {
-    font: '3d',
-    align: 'center',
-    colors: ['blue', 'red']
-});
-
-say(`By: AdolfoGriego`, {
-    font: 'console',
-    gradient: ['red', 'red']
-});
+console.log(chalk.gray('iniciando✨...'));
+console.log(chalk.gray('iniciando✨...'));
+console.log(chalk.blue('iniciando✨...')); // Cambiado a azul
+say('ANSI\nBOT\nMD', {font: 'block', align: 'center', colors: ['yellow', 'blueBright']}); // Cambiado a amarillo y azul brillante
+say(`CREADOR ${creador2}\npuro nica papa`, {font: 'console', gradient: ['red', 'cyan']}); // Cambiado a rojo y cian
 
 
 
