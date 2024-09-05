@@ -16,9 +16,9 @@ if (/image/.test(mime)) {
 conn.fakeReply(m.chat, `${lenguaje.sticker.text}`, '0@s.whatsapp.net', 'No haga spam')
 media = await quoted.download()  
 let encmedia = await conn.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author, contextInfo: {forwardedNewsletterMessageInfo: { 
-newsletterJid: '120363297379773397@newsletter', 
+newsletterJid: '120363160031023229@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: 'INFINITY-WA 💫' }, 
 forwardingScore: 9999999,  
 isForwarded: true, externalAdReply:{ showAdAttribution: false, title: botname, mediaType: 2, sourceUrl: nn6, thumbnail: imagen1}}})
 await fs.unlinkSync(encmedia)  
@@ -26,9 +26,9 @@ await fs.unlinkSync(encmedia)
 if ((quoted.msg || quoted).seconds > 20) return m. reply(lenguaje.sticker.text1)  
 media = await quoted.download()  
 let encmedia = await conn.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author, contextInfo: { forwardedNewsletterMessageInfo: { 
-newsletterJid: '120363297379773397@newsletter', 
+newsletterJid: '120363160031023229@newsletter', 
 serverMessageId: '', 
-newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️' }, 
+newsletterName: 'INFINITY-WA 💫' }, 
 forwardingScore: 9999999,  
 isForwarded: true, externalAdReply:{ showAdAttribution: false, title: botname, mediaType: 2, sourceUrl: nn6, thumbnail: imagen1}}})
 await new Promise((resolve) => setTimeout(resolve, 2000));
