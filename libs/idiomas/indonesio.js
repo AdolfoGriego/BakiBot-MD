@@ -277,10 +277,10 @@ https://whatsapp.com/channel/0029VaFVSkRCMY0KFmCMDX2q
 https://youtu.be/o6ZSpMOsvHs?si=fzwZIDN5LPE1w0pI
 
 *📍Dasbor:*
-https://dash.infinitywa-host.com
+https://dashboard.infinitywa.xyz
 
 *✅Panel:*
-https://panel.infinitywa-host.com
+https://live.panel-infinitywa.store
 
 *🧰 Bot Dukungan: eksklusif untuk host*
 wa.me/message/FETBF7YBO37CG1
@@ -319,57 +319,7 @@ text26: `*⚡ Sedang mencari hots berkualitas yang pas di kantong?*
 
 🧑‍💻 *Kontak (Diego Flores)*
 _(Keraguan HANYA PADA PEMBAWA ACARA)_
-• https://wa.me/50497150165`, 
-text27: (nna, host, paypal, fb) => `*\`💫 Kami mempersembahkan hosting baru untuk Anda: "Infinity-Wa" tuan rumah sendiri 😎\`*
-
-*Apakah Nokia Anda sangat lambat dan bot Anda harus aktif 24/7?*
-
-> *Kami memiliki opsi terbaik bagi Anda untuk menjaga bot Anda tetap aktif 24/7, dengan harga yang sangat terjangkau. Harganya sangat murah dan semua orang bisa membelinya.*
-
-*🚩Harga:*
-* 1GB, 100 CPU = 1 Dolar
-* 2GB, 120 CPU = 2Dolar
-* 3GB, 140 CPU = 3Dolar
-* 4GB, 175 CPU = 4Dolar
-* 5GB, 200 CPU = 5 Dólar. 
-
-🟢 \`\`\`Informasi Tuan Rumah\`\`\`
-
-💻 *Halaman:*
-https://infinitywa-host.com
-
-*💙 Dasbor:*
-https://dash.infinitywa-host.com
-
-⚙️ *Panel*
-https://panel.infinitywa-host.com
-
-🧡 *Saluran WhatsApp:*
-${nna}
-
-*🟣 Perselisihan:*
-https://discord.com/invite/vgfpe4Nwd8
-
-💚 *Grup:*
-${host}
-
-🛍️ *Metode pembayaran:*
-*• PayPal :* ${paypal}
-*• Pasar pembayaran, alias:* OficialGB
-*• Oranye x, alias:* infinity-host
-*• Yape (Peru) :* +51948705559
-*• Wah, CVU:* 0000007900204304075982
-*• Pembayaran kartu:* wa.me/390684003755
-
-*• Tautan pembayaran:*
-• _link.mercadopago.com.ar/h0sting_
-• _https://payment-link.astropay.com/RbMJ_
-*• Patreon:*_patreon.com/Infinity_wa_hosting_
-*• Kofi:* _https://ko-fi.com/infinitywa_
-
-*\`🗣📲 Hubungi kami untuk informasi lebih lanjut atau untuk menyewa jasa:\`*
-• ${fb}
-• wa.me/573147616444` }
+• https://wa.me/50497150165` }
  
 const menu = { 
 text: `❐ Awalan`, 

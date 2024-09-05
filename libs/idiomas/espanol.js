@@ -21,10 +21,10 @@ text6: `Código de 8 digitos.`,
 text7: `Escriba sólo el número de`, 
 text8: `la opción para conectarse.`, 
 text9: (chalk) => `NO SE PERMITE NÚMEROS QUE NO SEAN ${chalk.bold.greenBright("1")} O ${chalk.bold.greenBright("2")}, TAMPOCO LETRAS O SÍMBOLOS ESPECIALES.\n${chalk.bold.yellowBright("CONSEJO: COPIE EL NÚMERO DE LA OPCIÓN Y PÉGUELO EN LA CONSOLA.")}`, 
-text10: `👾 Comience con el código de país de su número de WhatsApp, ejemplo: +59178862672`, 
-text11: `👾 Ingresa el número que sera bot\nPor ejemplo: +59178862672`, 
-text12: `❌ Asegúrese de agregar el código de país.`, 
-text13: `👑 CÓDIGO DE VINCULACIÓN 👑:` }
+text10: `✨ Comience con el código de país de su número de WhatsApp, ejemplo: +59178862672`, 
+text11: `✨ Ingresa el número que sera bot\nPor ejemplo: +59178862672`, 
+text12: `⛔ Asegúrese de agregar el código de país.`, 
+text13: `✨ CÓDIGO DE VINCULACIÓN ✨:` }
 
 //call
 const smscall = () => { return `Seras bloqueado*\n_Razon : por realizar una` }
@@ -65,7 +65,7 @@ const promote = () => { return `Felicidades ahora eres parte del staff 🎉` }
 const demote = () => { return `ya no eres admins 🥲` }
 
 //mensaje el la consola inicio
-const smsConexion = () => { return `🟢 𝘜𝘚𝘜𝘈𝘙𝘐𝘖 𝘊𝘖𝘕𝘌𝘊𝘛𝘈𝘋𝘖 =>` }
+const smsConexion = () => { return `✨ 𝘜𝘚𝘜𝘈𝘙𝘐𝘖 𝘊𝘖𝘕𝘌𝘊𝘛𝘈𝘋𝘖 =>` }
 const smsEscaneaQR = () => { return `ESCANEA EL QR, EXPIRA 45 SEG...` }
 const smsConectado = () => { return `YA ESTA CONECTADO CORRECTAMENTE` }
 const smsConexionOFF = () => { return `[ ⚠️ ]  Conexion cerrada, por favor elimina la carpeta sessions y escanea nuevamente.`}
@@ -87,11 +87,11 @@ text6: `MENSAJE:` }
 
 //autobio
 const Bio = { 
-text: `🦁 ɴᴏᴠᴀʙᴏᴛ - ᴛᴇɴɢᴏ:`, 
+text: `✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨- ᴛᴇɴɢᴏ:`, 
 text2: `ᴜsᴜᴀʀɪᴏs ᴜsᴀᴅᴏʀᴍᴇ ᴘᴜᴇᴅᴏ ʀᴇsᴘᴏɴᴅᴇ ʟᴇɴᴛᴀ ᴍɪ ᴠᴇʟᴏᴄɪᴅᴀᴅ ᴅᴇ ʀᴇsᴘᴜᴇsᴛᴀ ᴇs:`,
-text3: `👑 ɴᴏᴠᴀʙᴏᴛ-ᴍᴅ | ᴀᴄᴛɪᴠᴏ ✅️:`, 
+text3: `✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨ | ᴀᴄᴛɪᴠᴏ ✅️:`, 
 text4: `ᴘᴀʀᴀ ᴠᴇᴢ ᴍɪ ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏ ᴜsᴀʀ #menu`, 
-text5: `ɴᴏᴠᴀʙᴏᴛ ᴘᴏʀ ʟᴏʟɪʙᴏᴛ - sᴜʙsᴄʀɪʙɪʀᴛᴇ ᴇʟ ɴᴜᴇsᴛʀᴏ ᴄᴀɴᴀʟ ᴅᴇʟ ʏᴏᴜᴛᴜʙᴇ 🔔\nhttps://www.youtube.com/@elrebelde.21`, 
+text5: `✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨ - sᴜʙsᴄʀɪʙɪʀᴛᴇ ᴇʟ ɴᴜᴇsᴛʀᴏ ᴄᴀɴᴀʟ ᴅᴇʟ ʏᴏᴜᴛᴜʙᴇ 🔔\nhttps://www.youtube.com/@Eliasar_yt`, 
 text6: `✅ Actividad:`, 
 text7: `👥 Usuarios:` }
 
@@ -112,7 +112,7 @@ const AntiLink = () => { return `*LINK DETECTADO 📢*` }
 const AntiLink2 = () => { return `Usted sera eliminado de este grupo` }
 const AntiToxic = (m, isToxic) => { return `Hey @${m.sender.split('@')[0]} decir la palabra *(${isToxic})* Esta prohibida En este grupo, No seas Toxico(a)\n\nADVERTENCIA` }
 const AntiToxic2 = () => { return `superaste las 4 advertencias serás eliminado de este grupo 😐....` }
-const viewOnce = () => { return `𝙌𝙐𝙀 𝙊𝘾𝙐𝙇𝙏𝘼𝙎 🧐` }
+const viewOnce = () => { return `𝙰𝚀𝚄𝙸 𝙽𝙾 𝚂𝙴 𝙿𝙴𝚁𝙼𝙸𝚃𝙴 𝙾𝙲𝚄𝙻𝚃𝙰𝚁 𝙽𝙰𝙳𝙰` }
 
 //autosticker
 const smsAutoSicker = () => { return `🤡 Hey Donde carajo viste un sticker que dure tanto bobo 🤣. (Máximo 15 segundos)` }
@@ -141,12 +141,8 @@ const bot = () => { return `*⚠️ Este comando solo (YO) lo puedo usar*` }
 const error = () => { return `⪨╼╼≪⚠️ ERROR ⚠️≫╾╼⪩\n\nOCURRIÓ UN ERROR INESPERADO, (API CAIDA 😢)` }
 const AvisoMG = () => { return `⪨╼╼≪⚠️ ACCION MAL USADA ⚠️≫╾╼⪩\n\n` }
 const advertencia = () => { return `[ ⚠️ ＡＤＶＥＲＴＥＮＣＩＡ ]` }
-const registra = () => { 
-    return `*[ 🏯 HEY ALTO, NO ESTÁS REGISTRADO 🏯 ]*\n\n❌ NO APARECES EN MI BASE DE DATOS ✋\n\nPara poder invocar al bot, debes estar registrado:\n\n#reg nombre.edad` 
-}
-const limit = () => { 
-    return `*💎 DIAMANTES USADOS PARA UN GUERRERO*` 
-}
+const registra = () => { return `*[ ✨ HEY ALTO NO ESTAS REGISTRADO ✨ ]*\n\nNO APARECES EN MI BASE DE DATOS 🛑\n\nPara poder usar el bot necesita estar registrado:\n\n#reg nombre.edad` }
+const limit = () => { return `*ᴅɪᴀᴍᴀɴᴛᴇ 💎 ᴜsᴀᴅᴏ*` }
 const AntiNsfw = () => { return `*Los comando +18 esta desactivado*\nSi eres admin y quiere activarlos usar:\n• modocaliente on` }
 const endLimit = () => { return `*😢 NOO TIENE MAS DIAMANTE 💎*\n\nPuede comprar mas usando el comando: #buy` }
 const exito = () => { return `*EXITOS ✅*` }
@@ -218,7 +214,7 @@ text20: (fb, md) => `╭─────────────┈⊷
 ╰┬────────────┈⊷
 ┌┤\`📌 REQUISITOS PARA LAS INSTALACION \`
 ┌┤❇️ _Dudas: ${fb}_
-┌┤❇️ _Tutoríal: https://www.youtube.com/@EliasarYT_
+┌┤❇️ _Tutoríal: https://www.youtube.com/@Eliasar_yt_
 ┌┤❇️ _1 GB de almacenamiento_
 ┌┤❇️ _Termux: https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.apk/file_
 ┌┤❇️ _GitHub: ${md}_
@@ -233,7 +229,7 @@ text20: (fb, md) => `╭─────────────┈⊷
 
 * apt update && apt upgrade && pkg update && pkg upgrade && pkg install bash && pkg install libwebp && pkg install git -y && pkg install nodejs -y && pkg install ffmpeg -y && pkg install wget && pkg install imagemagick -y && pkg install yarn
 
-* git clone https://github.com/Eliasar54/SAMURAI-BOT && cd SAMURAI-BOT && yarn && npm install
+* git clone https://github.com/Eliasar54/ansi-BOT-MD.git && cd ansi-BOT-MD && yarn && npm install
 
 * npm start
 
@@ -246,10 +242,10 @@ text20: (fb, md) => `╭─────────────┈⊷
 https://youtu.be/o6ZSpMOsvHs?si=fzwZIDN5LPE1w0pI
 
 *📍Dashboard:*
-https://dash.infinitywa-host.com
+https://dashboard.infinitywa.xyz
 
 *✅ Panel:*
-https://panel.infinitywa-host.com
+https://live.panel-infinitywa.store
 
 *🧰 Bot de Support: exclusivo para host* 
 wa.me/message/FETBF7YBO37CG1
@@ -324,7 +320,7 @@ text26: `*⚡ ¿Esta buscando un hots de calidad y al ajuste de su bolsillo?*
 🧑‍💻 *Contacto (Diego Flores)*
 _(Dudas UNICAMENTE SOBRE EL HOST)_
 • https://wa.me/50497150165`, 
-text27: (nna, host, paypal, fb) => `*\`💫 Te presentamos un nuevo hosting: "Infinity-Wa" host propios 😎\`*
+text27: (nna, host, paypal, fb) => `*\`💫 Te presentamos un nuevo hosting: "Infinity-Wa Host"\`*
 
 *¿Muy lento tu nokia y necesitas tener activo tu bot 24/7?*
 
@@ -340,56 +336,41 @@ text27: (nna, host, paypal, fb) => `*\`💫 Te presentamos un nuevo hosting: "In
 🟢 \`\`\`Información del Host\`\`\`
 
 💻 *Página:*
-https://infinitywa-host.com
-
-*💙 Dashboard:*
-https://dash.infinitywa-host.com
-
-⚙️ *Panel*
-https://panel.infinitywa-host.com
+https://host.panel-infinitywa.store
 
 🧡 *Canal de WhatsApp:*
 ${nna}
-
-*🟣 Discord:*
-https://discord.com/invite/vgfpe4Nwd8
 
 💚 *Grupo:*
 ${host}
 
 🛍️ *Método de pago:*
-*• PayPal :* ${paypal}
+*• PayPal :* CON INFINITI-WA
 *• Mercado pago, alías:* OficialGB
-*• Naranja x, alías:* infinity-host
+*• Naranja x, alías:* OficialGL
 *• Yape (Perú) :* +51948705559
-*• Uala, CVU:* 0000007900204304075982
-*• Pago con tarjeta:* wa.me/390684003755
 
-*• Link de pago:*
-• _link.mercadopago.com.ar/h0sting_
-• _https://payment-link.astropay.com/RbMJ_
-*• Patreon:*_patreon.com/Infinity_wa_hosting_
-*• Kofi:* _https://ko-fi.com/infinitywa_
-
-*\`🗣📲 Contactanos para más información o alquidir los servicios:\`*
+*\`💙 Contactanos para más información o alquidir los servicios:\`*
 • ${fb}
-• wa.me/573147616444` } 
+• wa.me/527294888993
+• wa.me/5492964650915` }
+
 const menu = {
-    text: `❖ 𝙋𝙍𝙀𝙁𝙄𝙅𝙊`, 
-    text2: `❖ 📆 𝙁𝙀𝘾𝙃𝘼 :`, 
-    text3: `❖ ⏱️ 𝙃𝙊𝙍𝘼  :`, 
-    text4: `❖ 📖 𝙑𝙀𝙍𝙎𝙄𝙊𝙉 :`, 
-    text5: `❖ 🥷 𝙐𝙎𝙐𝘼𝙍𝙄𝙊 :`, 
-    text6: `❖ ⚔️ 𝘼𝘾𝙏𝙄𝙑𝙄𝘿𝘼𝘿 :`, 
-    text7: `❖ 🏹 𝙈𝙊𝘿𝙊 :`, 
-    text8: `❖ 🔑 𝙇𝙄𝙈𝙄𝙉𝙄𝙏𝙀 :`, 
-    text9: `❖ 🌌 𝙉𝙄𝙑𝙀𝙇 :`, 
-    text10: `❖ 🏯 𝙍𝘼𝙉𝙂𝙊 :`, 
-    text11: `❖ 📝 ᖇᗴᑕᗴᑎᑌ :`, 
-    textt: `❖ 🤖 𝙎𝙊𝙔 𝘽𝙊𝙏 𝙊𝙁𝘾`, 
-    texttt: `❖ 🍃 𝙎𝙊𝙔 𝙐𝙉 𝙎𝘼𝙈𝙐𝙍𝘼𝙄 𝙎𝙐𝘽 𝘽𝙊𝙏 𝘿𝙀 :`, 
-    text12: `\`\`\`🏵️ ＬＩＳＴＡ ＤＥ ＣＯＭＡＮＤＯＳ 🏵️\`\`\`
-\`\`\`🗡️ 𝐛𝐨𝐭 𝐬𝐢𝐦𝐩𝐥𝐞 𝐜𝐨𝐧 𝐩𝐨𝐜𝐨𝐬 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬\`\`\``, 
+text: `❐ 𝑃𝑅𝐸𝐹𝐼𝐽𝑂`, 
+text2: `❐ 𝐹𝐸𝐶𝐻𝐴 :`, 
+text3: `❑ 𝐻𝑂𝑅𝐴 :`, 
+text4: `❐ 𝑉𝐸𝑅𝑆𝐼𝑂𝑁 :`, 
+text5: `❐ 𝑈𝑆𝑈𝐴𝑅𝐼𝑂:`, 
+text6: `❑ 𝐴𝐶𝑇𝐼𝑉𝐼𝐷𝐴𝐷:`, 
+text7: `❐ 𝑀𝑂𝐷𝑂:`, 
+text8: `❐ 𝐿𝐼𝑀𝐼𝑇𝐸:`, 
+text9: `❑ 𝑁𝐼𝑉𝐸𝐿: `, 
+text10: `❐ 𝑅𝐴𝑁𝐺𝑂 :`, 
+text11: `❐ 𝑅𝐸𝐺𝐼𝑆𝑇𝑅𝐴𝐷𝑂:`, 
+textt: `❐ 𝐵𝑂𝑇-𝑂𝐹𝐶 : 𝐵𝑂𝑇 𝑂𝐹𝐼𝐶𝐼𝐴𝐿 `, 
+texttt: `❐ 𝑆𝑂𝑌 𝑈𝑁 𝑆𝑈𝐵 𝐵𝑂𝑇 𝐷𝐸  :`, 
+text12: `\`\`\`✨ 𝐿𝐼𝑆𝑇𝐴 𝐷𝐸 𝐶𝑂𝑀𝐴𝑁𝐷𝑂𝑆 ✨\`\`\`
+\`\`\`ʙᴏᴛ sɪᴍᴘʟᴇ ᴄᴏɴ ᴘᴏᴄᴏs ᴄᴏᴍᴀɴᴅᴏs\`\`\``, 
 text13: `*Palabras especificas para que el bot interactue con usted*`, 
 text14: `_*ᴼʲᶦᵗᵒ ᵉˢᶜʳᶦᵇᵉ ᵗᵃˡ ʸ ᶜᵒᵐᵒ ᵉˢᵗᵃ ᵉⁿ ᵉˡ ᵐᵉⁿˢᵃʲᵉ*_
 *ᵠᵘᶦᵉʳᵉ ᵃᵍʳᵉᵍᵃ ᵃˡᵍᵘⁿ ᵃᵘᵈᶦᵒ ⁿᵘᵉᵛᵒ ᵉˢᶜʳᶦᵇᶦʳˡᵉ ᵃ ᵐᶦ ᶜʳᵉᵃᵈᵒʳ ᵘʷᵘ*`,
@@ -460,14 +441,14 @@ text: `*Que esta buscado? ingrese el nombre del tema*\n\nEjemplo:`,
 text1: `*Que esta buscado?*\n\ningrese el nombre del tema o el link de YouTube para descargar sus audio/video\n\nEjemplo:`, 
 text2: `         *⌜Cancion Encontrada ✅⌟*`,
 text3: `         *⌜Video Encontrado ✅⌟*`, 
-text4: `*Aqui tiene sus video 👌*`, 
+text4: `*Aqui tiene su video 👌*`, 
 text5: `          *⌜Audio Encontrado ✅⌟*`, 
 text6: `*𝘌𝘚𝘗𝘌𝘙𝘌 𝘌𝘕𝘝𝘐𝘈𝘕𝘋𝘖 𝘚𝘜 𝘈𝘙𝘊𝘏𝘐𝘝𝘖 𝘔𝘗3 ⚠*
 
-*𝘚𝘦𝘳𝘷𝘪𝘤𝘪𝘰 𝘱𝘳𝘰𝘷𝘦𝘪𝘥𝘰 𝘱𝘰𝘳 SAMURAI-BOT`, 
+*𝘚𝘦𝘳𝘷𝘪𝘤𝘪𝘰 𝘱𝘳𝘰𝘷𝘦𝘪𝘥𝘰 𝘱𝘰𝘳 ✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨*`, 
 text7: `*𝘌𝘚𝘗𝘌𝘙𝘌 𝘌𝘕𝘝𝘐𝘈𝘕𝘋𝘖 𝘚𝘜 𝘈𝘙𝘊𝘏𝘐𝘝𝘖 𝘔𝘗4 ⚠*
 
-*𝘚𝘦𝘳𝘷𝘪𝘤𝘪𝘰 𝘱𝘳𝘰𝘷𝘦𝘪𝘥𝘰 𝘱𝘰𝘳 SAMURAI-BOT*`, 
+*𝘚𝘦𝘳𝘷𝘪𝘤𝘪𝘰 𝘱𝘳𝘰𝘷𝘦𝘪𝘥𝘰 𝘱𝘰𝘳 ✨ 𝐚𝐧𝐬í-𝐁𝐎𝐓 ✨*`, 
 text8: `*Que esta buscando?*\n*Ingrese el nombre de algunas canción de spotify.*`, 
 text9: `*Donde esta el link del github?*\n\n*Ejemplo :*`, 
 text10: `*𝘈𝘎𝘜𝘈𝘙𝘋𝘌 𝘜𝘕 𝘔𝘖𝘔𝘌𝘕𝘛𝘖...*\n\nˢᶦ ᵉˡ ᵃʳᶜʰᶦᵛᵒ ⁿᵒ ˡˡᵉᵍᵃ ᵉˢ ᵠᵘᵉ ʳᵉᵖᵒˢᶦᵗᵒʳᶦᵒ ᵉˢ ᵐᵘʸ ᵖᵉˢᵃᵈᵒ`, 
@@ -522,21 +503,23 @@ text6: `*🔮 ＥＮＬＡＣＥ*`,
 text7: `*✅ 𝘚𝘶 𝘦𝘯𝘭𝘢𝘤𝘦 𝘴𝘦 𝘦𝘯𝘷𝘪𝘰𝘯 𝘢 𝘮𝘪 𝘗𝘳𝘰𝘱𝘪𝘦𝘵𝘢𝘳𝘪𝘰(𝘢)*\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n⚠️ *𝘚𝘶 𝘨𝘳𝘶𝘱𝘰 𝘴𝘦𝘳𝘢 𝘦𝘷𝘢𝘭𝘶𝘢𝘥𝘰 𝘺 𝘲𝘶𝘦𝘥𝘢𝘳𝘢 𝘢 𝘥𝘦𝘤𝘪𝘴𝘪𝘰𝘯 𝘥𝘦 𝘮𝘪 𝘗𝘳𝘰𝘱𝘪𝘦𝘵𝘢𝘳𝘪𝘰(𝘢) 𝘴𝘪 𝘦𝘭 𝘣𝘰𝘵 𝘴𝘦 𝘶𝘯𝘦 𝘰 𝘯𝘰 𝘢𝘭 𝘨𝘳𝘶𝘱𝘰.*\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n❕ *𝘌𝘴 𝘱𝘰𝘴𝘪𝘣𝘭𝘦 𝘲𝘶𝘦 𝘴𝘶 𝘚𝘰𝘭𝘪𝘤𝘪𝘵𝘶𝘥 𝘴𝘦𝘢 𝘙𝘦𝘤𝘩𝘢𝘻𝘢𝘥𝘢 𝘱𝘰𝘳 𝘭𝘢𝘴 𝘴𝘪𝘨𝘶𝘪𝘦𝘯𝘵𝘦𝘴 𝘊𝘢𝘶𝘴𝘢𝘴:*\n*1️⃣ 𝘌𝘭 𝘉𝘰𝘵 𝘦𝘴𝘵𝘢́ 𝘚𝘢𝘵𝘶𝘳𝘢𝘥𝘰.*\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n2️⃣ *𝘌𝘭 𝘉𝘰𝘵 𝘧𝘶𝘦 𝘦𝘭𝘪𝘮𝘪𝘯𝘢𝘥𝘰 𝘥𝘦𝘭 𝘎𝘳𝘶𝘱𝘰.*\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n3️⃣ *𝘌𝘭 𝘎𝘳𝘶𝘱𝘰 𝘯𝘰 𝘤𝘶𝘮𝘱𝘭𝘦 𝘤𝘰𝘯 𝘭𝘢𝘴 𝘕𝘰𝘳𝘮𝘢𝘵𝘪𝘷𝘢𝘴 𝘥𝘦 𝘣𝘰𝘵*\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n4️⃣ *𝘌𝘭 𝘦𝘯𝘭𝘢𝘤𝘦 𝘥𝘦𝘭 𝘨𝘳𝘶𝘱𝘰 𝘴𝘦 𝘳𝘦𝘴𝘵𝘢𝘣𝘭𝘦𝘤𝘪𝘰.*\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n5️⃣ *𝘕𝘰 𝘴𝘦 𝘢𝘨𝘳𝘦𝘨𝘢 𝘢 𝘎𝘳𝘶𝘱𝘰𝘴 𝘴𝘦𝘨𝘶́𝘯 𝘔𝘪 𝘗𝘳𝘰𝘱𝘪𝘦𝘵𝘢𝘳𝘪𝘰(𝘢)*\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n📧 *𝘓𝘢 𝘴𝘰𝘭𝘪𝘤𝘪𝘵𝘶𝘥 𝘱𝘶𝘦𝘥𝘦 𝘵𝘢𝘳𝘥𝘢𝘳 𝘏𝘰𝘳𝘢𝘴 𝘦𝘯 𝘴𝘦𝘳 𝘙𝘦𝘴𝘱𝘰𝘯𝘥𝘪𝘥𝘢. 𝘗𝘰𝘳 𝘧𝘢𝘷𝘰𝘳 𝘛𝘦𝘯𝘦𝘳 𝘗𝘢𝘤𝘪𝘦𝘯𝘤𝘪𝘢, 𝘎𝘳𝘢𝘤𝘪𝘢𝘴*\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n*ᴾᵘᵉᵈᵉ ᵃᵖᵒʸᵃʳ ᵉˡ ᵇᵒᵗ ᶜᵒⁿ ᵘⁿᵃ ᴱˢᵗʳᵉˡˡᶦᵗᵃ ᵉˡ ⁿᵘᵉˢᵗʳᵒ ʳᵉᵖᵒˢᶦᵗᵒʳᶦᵒ ᵒᶠᶦᶜᶦᵃˡ ʸ ˢᵘˢᶜʳᶦʳᵗᵉ ᵃ ⁿᵘᵉˢᵗʳᵒ ᶜᵃⁿᵃˡ ᵈᵉˡ ʸᵒᵘᵀᵘᵇᵉ ᵐᵃⁿᵈᵃ ᶜᵃʳᵗᵘʳᵃ ᵃ ᵐᶦ ᶜʳᵉᵃᵈᵒʳ ᵖᵃʳᵃ ᵠᵘᵉ ᵖᵘᵉᵈᵃ ᵃᵍʳᵉᵍᵃ ᵉˡ ᵇᵒᵗ ᵃ ᵗᵘ ᵍʳᵘᵖᵒ 💫*`, 
 text8: (md, yt, nn7, fb) => `*[ ＵＮＥ ＵＮ ＢＯＴ Ａ ＴＵ ＧＲＵＰＯ ]*
 
-Puedes solicitarlo haciendo una donación voluntaria a través de PayPal. 
+Puedes solicitarlo haciendo una donación voluntaria a través de PayPal o Mercado Pago arg. 
 
 🚀 El bot estará activo 24/7 para tu grupo.
 
 *⚡ ¿Por dónde puedo donar?*
-A través de nuestro Paypal,
+A través de nuestro Paypal, Mercado Pago o Naranja X.
 
 *❇️PayPal:* 
-https://paypal.me/EliasarMoncada72
+https://www.paypal.me/EliasarMoncada72
 
+*❇️Mercado pago:*
+*• NO TENEMOS ESTE MÉTODO DE PAGO PERO PUEDES
 
 *⚡ ¿No puedo donar hay otra opción para obtener un bot el mi Grupo?*
 puede apoyar nuestro repositorio oficial con una estrellita 🌟
 • ${md}
-• https://github.com/Eliasar54/ansi-BOT-MD
+• ${md}
 
 🔔 Subscrirte a nuestro canal de YouTube oficial
 • ${yt}
@@ -726,7 +709,7 @@ text3: `*Responda un sticker para robar`,
 text4: `ingresa algo para convertirlo a sticker :v`, 
 text5: `_*Calma crack estoy haciendo tu texto a sticker 👏*_\n\n_*Esto puede demorar unos minutos....*_` }
 
-const idioma = (prefix) => { return `*✳️ Usar:*\n${prefix}idioma 1 (español)\n${prefix}idioma 2 (inglés)\n${prefix}idioma 3 (arabe)\n${prefix}idioma 4 (Indonesia)\n${prefix}idioma 5 (portugues)\n${prefix}idioma 6 (ruso)\n\n*❗Ejemplo:*\n• ${prefix}idioma 1` }
+const idioma = (prefix) => { return `*✳️ Usar:*\n${prefix}idioma 1 (español)\n*❗Ejemplo:*\n• ${prefix}idioma 1` }
 const idioma2 = () => { return `✅ Idioma cambiado con éxito a ` }
 
 const smsReg = () => { return `*Ya estas registrado 🧐*` }
@@ -736,22 +719,29 @@ const smsReg3 = () => { return `La edad no puede estar vacia (Numeros)` }
 const smsReg4 = () => { return 'Esta Viejo (。-`ω´-)' }
 const smsReg5 = () => { return `🚼  Basado, los bebes saben escribir.✍️😳` }
 const smsReg6 = () => { return `🐈 Fua que basado, el nombre es muy largo que quiere un puente como nombre😹` }
-const smsReg7 = (name, user, age, time, date, sender, sn, prefix, rtotalreg) => { 
-return `[ 🏯 🏵️REGISTRO COMPLETADO 🏵️🏯 ]\n\n ◉ *Guerrero:* ${name} ${user.registered === true ? 'ͧͧͧͦꙶͣͤ✓' : ''}\n ◉ *Edad:* ${age} años\n ◉ *Hora del destino:* ${time}\n ◉ *Fecha del honor:* ${date}\n ◉ *Número del guerrero:* wa.me/${sender.split("@")[0]}\n ◉ *Código de serie*\n ⤷ ${sn}\n\n 🎁 *Recompensa por tu valentía:*\n ⤷ 2 diamantes 💎\n ⤷ 200 EXP ⚔️\n\n *◉ Para desatar el poder de los comandos del bot, invoca:* ${prefix}menu\n\n ◉ *Total de guerreros registrados en la aldea:* ${rtotalreg}` 
-}
-const smsReg8 = () => { return `*𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐎/𝐀 𝐆𝐔𝐄𝐑𝐑𝐄𝐑𝐎 𝐀 𝐋𝐀 𝐁𝐀𝐓𝐀𝐋𝐋𝐀*` }
+const smsReg7 = (name, user, age, time, date, sender, sn, prefix, rtotalreg) => { return `[ ✅ REGISTRO COMPLETADO ]\n\n ◉ *Nombre:* ${name} ${user.registered === true ? 'ͧͧͧͦꙶͣͤ✓' : ''}\n ◉ *Edad:* ${age} años\n ◉ *Hora:* ${time}\n ◉ *Fecha:* ${date}\n ◉ *Número:* wa.me/${sender.split("@")[0]}\n ◉ *Numero del serie*\n ⤷ ${sn}\n\n 🎁 *Recompensa:*\n ⤷ 2 diamante 💎\n ⤷ 200 exp\n\n *◉ Para ver los comandos del bot usar:*
+ ${prefix}menu\n\n ◉ *Total de usuários registrados:* ${rtotalreg}` }
+const smsReg8 = () => { return `*💬 𝗘𝗟 𝗜𝗗𝗜𝗢𝗠𝗔 𝗔 𝗦𝗜𝗗𝗢 𝗧𝗥𝗔𝗦𝗟𝗔𝗗𝗔𝗗𝗢 𝗔 𝗡𝗨𝗘𝗦𝗧𝗥𝗢 𝗨𝗡𝗜𝗖𝗢 𝗜𝗗𝗜𝗢𝗠𝗔 𝗘𝗦𝗣𝗔Ñ𝗢𝗟*` }
  
 const cuenta = (nna, md, yt, tiktok, fb) => { return `*Bienvenido a las cuentas oficiales ✨*
 
-*🏵️ Canal del WhatsApp / Update:*
+*👑 Numero de ${creador}:*
+• https://wa.me/message/WIOCUMWR26RZE1
+
+*✨ Canal del WhatsApp / Update:*
 • ${nna}
 
-*🏵️ GITHUB:*
+*✨ GITHUB:*
 • ${md}
 
-*🏵️ YOUTUBE:*
+*✨ YOUTUBE:*
 • ${yt}
 
+*✨ TIKTOK:*
+• ${tiktok}
+
+*✨ FACEBOOK:*
+• ${fb}
 
 *ˢᶦ ᵗᶦᵉⁿᵉⁿ ᵈᵘᵈᵃˢ ˢᵘᵍᵉʳᵉⁿᶜᶦᵃˢ ᵒ ᵖʳᵉᵍᵘⁿᵗᵃˢ ᵐᵉ ᵖᵘᵉᵈᵉ ᵉˢᶜʳᶦᵇᶦʳ ᵖᵒʳ ᶠᵃᶜᵉᵇᵒᵒᵏ*` }
 

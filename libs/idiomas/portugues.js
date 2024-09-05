@@ -242,10 +242,10 @@ text20: `╭─────────────┈⊷
 https://youtu.be/o6ZSpMOsvHs?si=fzwZIDN5LPE1w0pI
 
 *📍Painel:*
-https://dash.infinitywa-host.com
+https://dashboard.infinitywa.xyz
 
 *✅Painel:*
-https://panel.infinitywa-host.com
+https://live.panel-infinitywa.store
 
 *🧰 Support Bot: exclusivo para hosts*
 wa.me/message/FETBF7YBO37CG1
@@ -319,57 +319,7 @@ text26: `*⚡Você está procurando hots de qualidade que caibam no seu bolso?*
 
 🧑‍💻 *Contato (Diego Flores)*
 _(Dúvidas SOMENTE SOBRE O ANFITRIÃO)_
-• https://wa.me/50497150165`, 
-text27: (nna, host, paypal, fb) => `*\`💫 Apresentamos-lhe um novo alojamento: "Infinity-Wa" próprios anfitriões 😎\`*
-
-*Seu Nokia é muito lento e você precisa ter seu bot ativo 24 horas por dia, 7 dias por semana?*
-
-> *Temos a melhor opção para você manter seu bot ativo 24 horas por dia, 7 dias por semana, a preços muito acessíveis. É muito barato e todos podem comprar.*
-
-*🚩Preços:*
-* 1 GB, 100 CPU = 1 dólar
-* 2 GB, 120 CPU = 2 dólares
-* 3 GB, 140 CPU = 3 dólares
-* 4 GB, 175 CPU = 4 dólares
-* 5GB, 200 CPU = 5 Dólar.
-
-🟢 \`\`\` Informações do anfitrião\`\`\`
-
-💻 *Página:*
-https://infinitywa-host.com
-
-*💙 Painel:*
-https://dash.infinitywa-host.com
-
-⚙️ *Painel*
-https://panel.infinitywa-host.com
-
-🧡 *Canal WhatsApp:*
-${nna}
-
-*🟣 Discórdia:*
-https://discord.com/invite/vgfpe4Nwd8
-
-💚 *Grupo:*
-${host}
-
-🛍️ *Forma de pagamento:*
-*• PayPal :* ${paypal}
-*• Mercado de pagamentos, alias:* OficialGB
-*• Laranja x, aliás:* infinity-host
-*• Yapé (Peru):* +51948705559
-*• Uau, CVU:* 0000007900204304075982
-*• Pagamento com cartão:* wa.me/390684003755
-
-*• Link de pagamento:*
-• _link.mercadopago.com.ar/h0sting_
-• _https://payment-link.astropay.com/RbMJ_
-*• Patreon:*_patreon.com/Infinity_wa_hosting_
-*• Kofi:* _https://ko-fi.com/infinitywa_
-
-*\`🗣📲 Contacte-nos para mais informações ou para alugar serviços:\`*
-• ${fb}
-• wa.me/573147616444` }
+• https://wa.me/50497150165` }
 
 const menu = {
 text: `❐ Prefixo`, 
