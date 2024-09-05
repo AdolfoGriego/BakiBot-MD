@@ -386,6 +386,7 @@ return admins
  */
 
 exports.smsg = (conn, m, hasParent) => {
+const pushname = m.pushName || "Sin nombre" 
 conn.downloadMediaMessage = async (message) => {
 let mime = (message.msg || message).mimetype || ''
 let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
@@ -428,14 +429,38 @@ if (!isNumber(user.afkTime)) user.afkTime = -1
 if (!isNumber(user.joincount)) user.joincount = 1;
 if (!('afkReason' in user)) user.afkReason = ''  
 if (!('banned' in user)) user.banned = false
-if (!isNumber(user.limit)) user.limit = 20  
+if (!isNumber(user.limit)) user.limit = 25
+if (!isNumber(user.coins)) user.coins = 100
+if (!isNumber(user.gato)) user.gato = 0
+if (!isNumber(user.perro)) user.perro = 0
+if (!isNumber(user.monos)) user.monos = 0
+if (!isNumber(user.lobos)) user.lobos = 0
 if (!isNumber(user.banco)) user.banco = 0
+if (!isNumber(user.tridente)) user.tridente = 0
+if (!isNumber(user.telefeno)) user.telefeno = 0
+if (!isNumber(user.camara)) user.camara = 0
+if (!isNumber(user.reloj)) user.reloj = 0
+if (!isNumber(user.daga)) user.daga = 0
+if (!isNumber(user.television)) user.television = 0
+if (!isNumber(user.impresora)) user.impresora = 0
+if (!isNumber(user.auto)) user.auto = 0
+if (!isNumber(user.moto)) user.moto = 0
+if (!isNumber(user.vehiculo)) user.vehiculo = 0
+if (!isNumber(user.ambulancia)) user.ambulancia = 0
+if (!isNumber(user.avion)) user.avion = 0
+if (!isNumber(user.banco)) user.banco = 0
+if (!isNumber(user.cohete)) user.cohete = 0
+if (!isNumber(user.ovni)) user.ovni = 0
+if (!isNumber(user.helicoptero)) user.helicoptero = 0
+if (!isNumber(user.autobus)) user.autobus = 0
+if (!isNumber(user.fuente)) user.fuente = 0
+if (!isNumber(user.castillo)) user.castillo = 0
 if (!user.premiumTime)  user.premiumTime = 0
 if (!isNumber(user.warn)) user.warn = 0
-if(!isNumber(user.money)) user.money = 0  
+if(!isNumber(user.money)) user.money = 300
 if(!isNumber(user.health)) user.health = 100  
 if(!isNumber(user.warn)) user.warn = 0  
-if(!isNumber(user.exp)) user.exp = 0
+if(!isNumber(user.exp)) user.exp = 5
 if(!isNumber(user.role)) user.role = '🙊 NOVATO(A) :v'
 if (!('autolevelup' in user)) user.autolevelup = true
 if(!isNumber(user.level)) user.level = 0
@@ -448,6 +473,7 @@ if (!isNumber(user.gajah)) user.gajah = 0
 if (!isNumber(user.kambing)) user.kambing = 0
 if (!isNumber(user.panda)) user.panda = 0
 if (!isNumber(user.buaya)) user.buaya = 0
+if (!isNumber(user.timebatalla)) user.timebatalla = 0
 if (!isNumber(user.kerbau)) user.kerbau = 0
 if (!isNumber(user.sapi)) user.sapi = 0
 if (!isNumber(user.monyet)) user.monyet = 0
@@ -465,10 +491,10 @@ if (!isNumber(user.robs)) user.robs = 0
 if (!isNumber(user.spam)) user.spam = 0
 if (!isNumber(user.spam2)) user.spam2 = 0
 if (!isNumber(user.lastclaim)) user.lastclaim = 0
-if (!isNumber(user.juegos)) user.juegos = 0
-if (!isNumber(user.lastslot)) user.lastslot = 0
+if (!isNumber(user.lastslot)) user.lastslot= 0
 if (!isNumber(user.lastcofre)) user.lastcofre = 0
 if(!isNumber(user.diamonds)) user.diamonds = 0
+if (!isNumber(user.juegos)) user.juegos = 0
 if(!isNumber(user.swordDurability)) user.swordDurability = 100
 if(!isNumber(user.pickaxeDurability)) user.pickaxeDurability = 100
 if(!isNumber(user.axeDurability)) user.axeDurability = 100
@@ -482,24 +508,47 @@ if (!isNumber(user.trash)) user.trash = 0
 afkTime: -1,  
 afkReason: '',  
 banned: false, 
-limit: 20,  
+limit: 25, 
 warn: 0,
-money: 0,
+money: 300,
 banco: 0,
 registered: false,
 premium: false, 
+tridente: 0,
+telefeno: 0,
+camara: 0,
+reloj: 0,
+daga: 0,
+television: 0,
+impresora: 0,
+auto: 0,
+moto: 0,
+vehiculo: 0,
+ambulancia: 0,
+avion: 0,
+cohete: 0,
+ovni: 0, 
+helicoptero: 0,
+autobus: 0,
+fuente: 0,
+castillo: 0,
 joincount: 1,
 lastclaim: 0,
 name: m.name,
-Language: false, 
+Language: 0,
 mensaje: 0,
 lastmiming: 0,
 lastmiming2: 0,
+timebatalla: 0,
 age: -1,
 regTime: -1,
 afk: -1,
 afkReason: '',
 money: 0,  
+lobos: 0,
+monos: 0,
+perro: 0,
+gato: 0,
 health: 100,  
 prem: false,
 premiumTime: 0,
@@ -546,13 +595,13 @@ if (!('antiNsfw' in chats)) chats.antiNsfw = true
 if (!('antispam' in chats)) chats.antispam = true
 if (!('antiFake' in chats)) chats.antiFake = false
 if (!('antiArabe' in chats)) chats.antiArabe = false
-if (!('antitoxic' in chats)) chats.antitoxic = false
+if (!('antitoxic' in chats)) chats.antitoxic = true
 if (!('autosticker' in chats)) chats.autosticker = false
 if (!('detect' in chats)) chats.detect = true
 if (!('autoread' in chats)) chats.autoread = true
 if (!('autolevelup' in chats)) chats.autolevelup = true
 if (!('viewonce' in chats)) chats.viewonce = true 
-if (!('game2' in chats)) chats.game2 = true 
+if (!('game2' in chats)) chats.game2 = true 	
 if (!('rules' in chats)) chats.rules = ''
 } else global.db.data.chats[m.chat] = {  
 antilink: false,  
@@ -571,13 +620,13 @@ simi: false,
 antiNsfw: true, 
 antispam: true, 
 antiFake: false,
-antitoxic: false, 
+antitoxic: true, 
 autosticker: false, 
 detect: true, 
 autoread: false, 
 autolevelup: true, 
 viewonce: true, 
-game2: true, 
+game2: true, 	
 rules: ''
 }
   
@@ -587,18 +636,16 @@ if (setting) {
 if (!isNumber(setting.status)) setting.status = 0  
 if (!('self' in setting)) setting.self = false;
 if (!('autobio' in setting)) setting.autobio = true
-  if (!('jadibot' in setting)) setting.jadibot = true 
+if (!('jadibot' in setting)) setting.jadibot = true 
 if (!('anticall' in setting)) setting.anticall = true
 if (!('antiprivado' in setting)) setting.antiprivado = false;
-if (!('antipv' in setting)) setting.antipv = false;	
 } else global.db.data.settings[conn.user.jid] = {  
 status: 0,  
 self: false, 
 autobio: true,
 jadibot: true,
 anticall: true, 
-antiprivado: false, 
-antipv: false
+antiprivado: false
 } 
 
 global.db.data.sticker = global.db.data.sticker || {} // sticker for addcmd   
@@ -660,11 +707,11 @@ if (user.level <= 3) {
 } else if (user.level <= 84) {
   user.role = 'DIAMANTE III 💎'
 } else if (user.level <= 87) {
-  user.role = '😮 PRO EN Samurai-botIII'
+  user.role = '😮 PRO EN ANSI III'
 } else if (user.level <= 90) {
-  user.role = '😮 PRO EN Samurai-bot II'
+  user.role = '😮 PRO EN ANSI II'
 } else if (user.level <= 93) {
-  user.role = '😮 PRO EN Samurai-bot I'
+  user.role = '😮 PRO EN ANSÍI'
 } else if (user.level <= 96) {
   user.role = 'SUPER PRO III 🎩'
 } else if (user.level <= 99) {
@@ -1005,7 +1052,7 @@ conn.sendPoll = (jid, name = '', values = [], selectableCount = 1) => { return c
 conn.parseMention = (text = '') => {
 return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')
 }
- 
+
 conn.sendTextWithMentions = async (jid, text, quoted, options = {}) => conn.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
 
 conn.sendText = (jid, text, quoted = '', options) => conn.sendMessage(jid, { text: text, ...options }, { quoted })
@@ -1143,8 +1190,8 @@ conn.sendList = async(jid, title, text, buttonText, listSections, quoted, option
           forwardingScore: 1,
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363297379773397@newsletter',
-            newsletterName: '𝐁𝐚𝐤𝐢𝐁𝐨𝐭-𝐌𝐃️', 
+            newsletterJid: '120363296103096943@newsletter',
+            newsletterName: `${ucapan()} ${pushname}`, 
             serverMessageId: ''
           }
         }
@@ -1246,6 +1293,30 @@ let msg = {...chatUpdate, messages: [proto.WebMessageInfo.fromObject(messages)],
 conn.ev.emit('messages.upsert', msg)
 }
 return m
+}
+
+function ucapan() {
+  const time = moment.tz("America/Los_Angeles").format("HH"); //America/Los_Angeles  Asia/Jakarta   America/Toronto
+
+  let res = "🌉Buenas madrugadas";
+
+  if (time >= 4) {
+    res = "🌇Buenos Días";
+  }
+
+  if (time >= 11) {
+    res = "🏙️Buenas Tardes";
+  }
+
+  if (time >= 15) {
+    res = "🌆Buenas tardes";
+  }
+
+  if (time >= 17) {
+    res = "🌃Buenas noches";
+  }
+
+  return res;
 }
 
 let file = require.resolve(__filename)
