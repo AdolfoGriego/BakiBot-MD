@@ -233,7 +233,7 @@ conn.well = false
 if (!opts['test']) {
 if (global.db) setInterval(async () => {
 if (global.db.data) await global.db.write()
-if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', "NatsukiJadiBot"], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '2', '-type', 'f', '-delete'])))}, 30 * 1000)}
+if (opts['autocleartmp'] && (global.support || {}).find) (tmp = [os.tmpdir(), 'tmp', "BakiJadiBot"], tmp.forEach(filename => cp.spawn('find', [filename, '-amin', '2', '-type', 'f', '-delete'])))}, 30 * 1000)}
 if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
 
 async function getMessage(key) {
@@ -290,7 +290,7 @@ process.on('uncaughtException', console.error);
 //process.send('reset') })
 
 /*async function connectSubBots() {
-const subBotDirectory = './NatsukiJadiBot';
+const subBotDirectory = './BakiJadiBot';
 if (!existsSync(subBotDirectory)) {
 console.log('No se encontraron ningun sub bots.');
 return;
@@ -315,7 +315,7 @@ console.log(chalk.bold.greenBright(`TODOS LOS SUB BOTS SE HAN CONECTADO CORRECTA
 (async () => {
 global.conns = [];
 
-const mainBotAuthFile = 'NatsukiSessions';
+const mainBotAuthFile = 'BakiBotSessions';
 try {
 const mainBot = await connectionUpdate(mainBotAuthFile);
 global.conns.push(mainBot);
