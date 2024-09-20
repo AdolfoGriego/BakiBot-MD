@@ -1,0 +1,18 @@
+{
+"name": "BakiBot-MD",
+"website": "https://github.com/AdolfoGriego",
+"description": "Super Bot WhatsApp",
+"repository": "https://github.com/AdolfoGriego/BakiBot-MD",
+"logo": "https://telegra.ph/file/4f6c25b2a8bdf655aa1e1.jpg",
+"success_url": "https://github.com/AdolfoGriego/BakiBot-MD",
+"keywords": [
+"nodejs", "heroku", "bot", "spanish", "english", "indonesian", "arab", "portuguese", "italian", "french", "whatsapp",
+"termux", "superbot", "multi-device", "md", "official", "javascript", "bakibot"],
+"image": "heroku/nodejs",
+"buildpacks": [
+{ "url": "heroku/nodejs" },
+{ "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest" },
+{ "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git" },
+{ "url": "https://github.com/bogini/heroku-buildpack-graphicsmagick" }    
+]
+}
